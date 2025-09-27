@@ -76,9 +76,12 @@ Aspectos como **usabilidade** foram excluídos nesta fase, pois não se relacion
 
 ### Adaptação e priorização
 
-* **Adequação funcional – Alta prioridade:** fundamental para assegurar a confiança dos usuários nas recomendações.
-* **Eficiência – Alta prioridade:** garante que o sistema seja viável mesmo em cenários de alto volume de dados.
-* **Manutenibilidade – Média prioridade:** importante para evolução futura e sustentabilidade do projeto.
+* **Adequação funcional – Alta prioridade:** no caso do MEPA, significa que as recomendações tarifárias precisam estar em total conformidade com as normas da ANEEL e refletir fielmente os dados processados das faturas. Se a plataforma sugerir um contrato incorreto, pode causar prejuízos financeiros significativos às IFES, comprometendo a credibilidade do sistema. Além disso, como a solução já demonstrou potencial de economia de milhões de reais por ano em instituições públicas, a confiança nos resultados é essencial para sua adoção em larga escala.
+
+* **Eficiência – Alta prioridade:** o MEPA lida com **grandes volumes de dados históricos de consumo de energia elétrica** e precisa analisar informações de diferentes distribuidoras. A eficiência garante que as simulações de cenários e as recomendações contratuais sejam processadas rapidamente, viabilizando decisões tempestivas por parte dos gestores de energia. Esse aspecto é particularmente crítico porque atrasos ou lentidão podem inviabilizar a gestão contínua e proativa dos contratos.
+
+* **Manutenibilidade – Média prioridade:** sendo um software livre desenvolvido em parceria com a UnB e a comunidade acadêmica, a evolução do MEPA depende de contribuições externas e ajustes constantes para acompanhar mudanças regulatórias no setor elétrico. Uma boa manutenibilidade permite que novos módulos (ex.: integração com sistemas de gestão universitária ou relatórios personalizados) sejam incorporados sem comprometer o núcleo do sistema. Embora não tenha impacto direto e imediato no uso diário como adequação funcional e eficiência, é vital para a **sustentabilidade de longo prazo** do projeto.
+
 
 A priorização foi feita com base na relevância para o propósito declarado e no impacto direto para as IFES.
 
