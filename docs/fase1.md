@@ -95,7 +95,7 @@ Aspectos como **usabilidade** foram excluídos nesta fase, pois não se relacion
 
 ### Adaptação e priorização
 
-Embora o Modelo de Qualidade do Produto ISO/IEC 25010 apresente oito características, para a avaliação inicial do MEPA Contratos, decidimos focar nas três características que têm o impacto mais direto e crítico no propósito do sistema.
+Embora o Modelo de Qualidade do Produto ISO/IEC 25010 apresente oito características, para a avaliação inicial do MEPA, decidimos focar nas três características que têm o impacto mais direto e crítico no propósito do sistema.
 
 As características priorizadas e o motivo da escolha são:
 
