@@ -128,12 +128,11 @@ Esta característica se refere à facilidade com que o software pode ser modific
 
 O domínio de contratos de energia é altamente regulamentado e muda com frequência (tarifas, impostos, regras contratuais). A necessidade de manutenibilidade é exacerbada pelo fato de o MEPA ser um software livre desenvolvido em parceria com a UnB e a comunidade acadêmica. Sua evolução depende de contribuições externas e ajustes constantes para acompanhar as mudanças regulatórias. Para facilitar essa colaboração e garantir a sustentabilidade do projeto, o código-fonte deve ser modular e a modificabilidade deve ser alta, permitindo que a comunidade implemente alterações rapidamente.
 
-----
+-----
 
 Ao restringir o foco a estas três características, garantimos uma avaliação mais profunda e prática, diretamente alinhada aos riscos e objetivos de negócio do sistema.
 
-A priorização foi feita com base na relevância para o propósito declarado e no impacto direto para as IFES.
-
+-----
 ### Escopo e profundidade da avaliação
 
 O escopo cobre:
@@ -178,6 +177,6 @@ O MEPA contribui diretamente para os seguintes Objetivos de Desenvolvimento Sust
 | **Data**       | **Versão** | **Descrição**                         | **Autor**                                      | **Revisor**                                      | **Data da Revisão** |
 | :--------: | :----: | :-------------------------------- | :----------------------------------------: | :----------------------------------------: | :-------------: |
 | 27/09/2025 |  `1.0`   | Documentação inicial da entrega da Fase 1 | [`@Davia Aguiar`](https://github.com/davi-aguiar-vieira) | [`@Fabio`](https://github.com/fabinsz) |   27/09/2025    |
-| 30/09/2025 |  `1.1`   | Documentação mais detalhada dos modelos de qualidade, adaptação e priorização | [`@Fabio`](https://github.com/fabinsz) | [`@Ana Clara`]() |      |
+| 30/09/2025 |  `1.1`   | Documentação mais detalhada dos modelos de qualidade, adaptação e priorização | [`@Fabio`](https://github.com/fabinsz) | [`@`]() |      |
 
 
