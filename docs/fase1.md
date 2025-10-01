@@ -176,7 +176,7 @@ O MEPA contribui diretamente para os seguintes Objetivos de Desenvolvimento Sust
 
 | **Data**       | **Versão** | **Descrição**                         | **Autor**                                      | **Revisor**                                      | **Data da Revisão** |
 | :--------: | :----: | :-------------------------------- | :----------------------------------------: | :----------------------------------------: | :-------------: |
-| 27/09/2025 |  `1.0`   | Documentação inicial da entrega da Fase 1 | [`@Davia Aguiar`](https://github.com/davi-aguiar-vieira) | [`@Fabio`](https://github.com/fabinsz) |   27/09/2025    |
-| 30/09/2025 |  `1.1`   | Documentação mais detalhada dos modelos de qualidade, adaptação e priorização | [`@Fabio`](https://github.com/fabinsz) | [`@`]() |      |
-
+| 27/09/2025 |  `1.0`   | Documentação inicial da entrega da Fase 1 | [`@Arth e @Davia Aguiar`](https://github.com/davi-aguiar-vieira) | [`@Fabio`](https://github.com/fabinsz) |   27/09/2025    |
+| 27/09/2025 |  `1.1`   | Detalhamento de adaptação e priorização | [`@Arthur`](https://github.com/arthrok) | [`@`]() |      |
+| 30/09/2025 |  `1.2`   | Documentação mais detalhada dos modelos de qualidade, adaptação e priorização | [`@Fabio`](https://github.com/fabinsz) | [`@`]() |      |
 
