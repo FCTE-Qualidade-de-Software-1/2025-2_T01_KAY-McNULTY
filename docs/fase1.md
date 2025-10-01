@@ -174,9 +174,12 @@ O MEPA contribui diretamente para os seguintes Objetivos de Desenvolvimento Sust
 ---
 ## Histórico de Versões
 
-| **Data**       | **Versão** | **Descrição**                         | **Autor**                                      | **Revisor**                                      | **Data da Revisão** |
+| **Data** | **Versão** | **Descrição** | **Autor** | **Revisor** | **Data da Revisão** |
 | :--------: | :----: | :-------------------------------- | :----------------------------------------: | :----------------------------------------: | :-------------: |
 | 27/09/2025 |  `1.0`   | Documentação inicial da entrega da Fase 1 | [`@Arth e @Davia Aguiar`](https://github.com/davi-aguiar-vieira) | [`@Fabio`](https://github.com/fabinsz) |   27/09/2025    |
 | 27/09/2025 |  `1.1`   | Detalhamento de adaptação e priorização | [`@Arthur`](https://github.com/arthrok) | [`@`]() |      |
 | 30/09/2025 |  `1.2`   | Documentação mais detalhada dos modelos de qualidade, adaptação e priorização | [`@Fabio`](https://github.com/fabinsz) | [`@`]() |      |
+| 01/10/2025 |  `1.3`   | Adição da seção de Metodologia e detalhamento dos stakeholders (partes interessadas). | [`@Wallyson`]() | [`@`](https://github.com/fabinsz) |   01/10/2025    |
+| 01/10/2025 |  `1.4`   | Elaboração da justificativa para a priorização das características de qualidade (Adequação Funcional, Eficiência e Manutenibilidade). | [`@Mateus`]() | [`@`]() |   01/10/2025    |
+| 01/10/2025 |  `1.5`   | Inclusão da análise dos Objetivos de Desenvolvimento Sustentável (ODS) e formatação das referências bibliográficas. | [`@Felipe`]() | [`@`]() |   01/10/2025    |
 
