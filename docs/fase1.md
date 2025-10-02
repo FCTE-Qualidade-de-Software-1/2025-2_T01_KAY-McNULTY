@@ -95,7 +95,7 @@ Aspectos como **usabilidade** foram excluídos nesta fase, pois não se relacion
 
 ### Adaptação e priorização
 
-Embora o Modelo de Qualidade do Produto ISO/IEC 25010 apresente oito características, para a avaliação inicial do MEPA, decidimos focar nas três características que têm o impacto mais direto e crítico no propósito do sistema.
+Embora o modelo ISO/IEC 25010 seja composto por oito características, esta avaliação se concentrará nas três mais críticas para o propósito do MEPA, garantindo uma análise com maior profundidade e relevância prática.
 
 As características priorizadas e o motivo da escolha são:
 
@@ -103,10 +103,7 @@ As características priorizadas e o motivo da escolha são:
 
 **Prioridade Alta**
 
-Esta característica garante que o Software forneça as funções corretas para cumprir seu objetivo primário: recomendar ajustes e avaliar contratos de energia. 
-
-
-A Corretude Funcional é crucial. Se o sistema não realizar os cálculos de economia ou a análise de faturas com 100% de precisão, as IES podem tomar decisões financeiras erradas. A validade e a confiabilidade das recomendações do MEPA dependem integralmente desta característica.
+Esta característica valida se o software entrega as funcionalidades prometidas com precisão. Para o MEPA, isso se traduz em sua capacidade de analisar faturas e recomendar contratos de energia de forma correta. A corretude funcional é o requisito mais crítico, pois um cálculo impreciso ou uma recomendação equivocada pode levar a decisões financeiras prejudiciais para as IFES, invalidando completamente o propósito do sistema.
 
 -----
 
@@ -114,9 +111,7 @@ A Corretude Funcional é crucial. Se o sistema não realizar os cálculos de eco
 
 **Prioridade Alta**
 
-Esta característica lida com a performance do sistema em relação aos recursos utilizados (tempo de processamento e resposta).
-
-O sistema lida com grandes volumes de dados históricos de consumo de energia elétrica e precisa analisar informações provenientes de diferentes distribuidoras. Portanto, o processamento de grandes volumes de dados de faturas e a execução dos algoritmos de recomendação devem ser rápidos. Se o sistema demorar muito para gerar um relatório de recomendação, isso pode atrasar decisões administrativas e financeiras importantes, comprometendo a utilidade do sistema.
+Avalia o desempenho do software em relação aos recursos consumidos (tempo e processamento). O MEPA precisa processar grandes volumes de dados históricos de consumo de múltiplas fontes. A lentidão na geração de relatórios compromete a utilidade prática da ferramenta, podendo atrasar decisões administrativas e financeiras importantes. Portanto, o sistema deve ser capaz de executar suas análises em tempo hábil, mesmo com o aumento da carga de dados.
 
 -----
 
@@ -124,9 +119,7 @@ O sistema lida com grandes volumes de dados históricos de consumo de energia el
 
 **Prioridade Média**
 
-Esta característica se refere à facilidade com que o software pode ser modificado.
-
-O domínio de contratos de energia é altamente regulamentado e muda com frequência (tarifas, impostos, regras contratuais). A necessidade de manutenibilidade é exacerbada pelo fato de o MEPA ser um software livre desenvolvido em parceria com a UnB e a comunidade acadêmica. Sua evolução depende de contribuições externas e ajustes constantes para acompanhar as mudanças regulatórias. Para facilitar essa colaboração e garantir a sustentabilidade do projeto, o código-fonte deve ser modular e a modificabilidade deve ser alta, permitindo que a comunidade implemente alterações rapidamente.
+Refere-se à facilidade com que o software pode ser modificado para corrigir falhas, melhorar o desempenho ou adaptar-se a um ambiente em mudança. O domínio de contratos de energia é altamente regulamentado e volátil (novas tarifas, impostos, regras). O risco de obsolescência das regras de negócio é alto, e a manutenibilidade é o que mitiga esse risco. Sendo um projeto de software livre acadêmico, sua evolução depende de contribuições externas. Um código modular, testável e fácil de entender é fundamental para atrair e reter colaboradores, garantindo a sustentabilidade e a vida útil do projeto.
 
 -----
 
@@ -179,7 +172,7 @@ O MEPA contribui diretamente para os seguintes Objetivos de Desenvolvimento Sust
 | 27/09/2025 |  `1.0`   | Documentação inicial da entrega da Fase 1 | [`@Arth e @Davia Aguiar`](https://github.com/davi-aguiar-vieira) | [`@Fabio`](https://github.com/fabinsz) |   27/09/2025    |
 | 27/09/2025 |  `1.1`   | Detalhamento de adaptação e priorização | [`@Arthur`](https://github.com/arthrok) | [`@`]() |      |
 | 30/09/2025 |  `1.2`   | Documentação mais detalhada dos modelos de qualidade, adaptação e priorização | [`@Fabio`](https://github.com/fabinsz) | [`@`]() |      |
-| 01/10/2025 |  `1.3`   | Adição da seção de Metodologia e detalhamento dos stakeholders (partes interessadas). | [`@Wallyson`]() | [`@`](https://github.com/fabinsz) |   01/10/2025    |
-| 01/10/2025 |  `1.4`   | Elaboração da justificativa para a priorização das características de qualidade (Adequação Funcional, Eficiência e Manutenibilidade). | [`@Mateus`]() | [`@`]() |   01/10/2025    |
-| 01/10/2025 |  `1.5`   | Inclusão da análise dos Objetivos de Desenvolvimento Sustentável (ODS) e formatação das referências bibliográficas. | [`@Felipe`]() | [`@`]() |   01/10/2025    |
+| 01/10/2025 |  `1.3`   | Adição da seção de Metodologia e detalhamento dos stakeholders (partes interessadas). | [`@Wallyson`]() | [`@Fabio`](https://github.com/fabinsz) |   01/10/2025    |
+| 01/10/2025 |  `1.4`   | Elaboração da justificativa para a priorização das características de qualidade (Adequação Funcional, Eficiência e Manutenibilidade). | [`@Mateus`]() | [`@Wallyson`]() |   01/10/2025    |
+| 01/10/2025 |  `1.5`   | Inclusão da análise dos Objetivos de Desenvolvimento Sustentável (ODS) e formatação das referências bibliográficas. | [`@Felipe`]() | [`@Mateus`]() |   01/10/2025    |
 
