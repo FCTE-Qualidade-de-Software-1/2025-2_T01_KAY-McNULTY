@@ -160,7 +160,10 @@ Um **alto** Índice de Manutenibilidade (**M-MT-01**) e uma **baixa** Complexida
 #### De onde vêm os “valores”?
 1.  **Convenções:** O **Índice de Manutenibilidade** tem limiares estabelecidos pela literatura (*e.g.*, MI abaixo de 65 é frequentemente considerado de alto risco). A **Complexidade Ciclomática** ideal para uma função individual deve ser baixa, tipicamente abaixo de 10. A **Cobertura de Teste** é um percentual, onde 80% ou mais é geralmente considerado um bom patamar de proteção para sistemas críticos.
 2.  **Contexto:** O valor alvo da Cobertura de Teste deve ser **maior** nos módulos de regras de negócio (cálculo de tarifa, recomendação), que são a essência crítica do MEPA.
-3.  **Definição Concreta:** Na Fase 3, após o baseline (primeira medição), fixamos limiares numéricos para cada métrica, conforme ISO/IEC 15939 e IEEE 1061. *Exemplo: "Manter MI acima de 75" ou "Garantir Cobertura de Linhas > 85% no módulo de cálculo de tarifa."*
+3. **ISO/IEC 25023** define o que medir (complexidade, testabilidade, modularidade), mas os **limiares** devem ser ajustados ao contexto do projeto.  
+4. **IEEE 1061** recomenda *baseline empírico, seguido de **revisão periódica** conforme evolução da base de código.
+
+- **Definição Concreta:** Na Fase 3, após o baseline (primeira medição), fixamos limiares numéricos para cada métrica, conforme ISO/IEC 15939 e IEEE 1061. *Exemplo: Complexidade Ciclomática ≤ 10 (aceitável), > 15 (requer revisão).  Cobertura de Testes ≥ 80%. MI ≥ 80 (bom), 50–79 (aceitável), < 50 (ruim).*
 
 ### Referências e leitura por métrica
 
@@ -196,4 +199,4 @@ Um **alto** Índice de Manutenibilidade (**M-MT-01**) e uma **baixa** Complexida
 | **12/10/2025** | **`1.0`**  | **Fase 2 — versão inicial (*Introdução, Objetivo e Metodologia*)**           | **[`@arthrok` — Arthur Alves Melo](https://github.com/arthrok)** | **[`@Fabio`](https://github.com/fabinsz)**                 | **12/10/2025**      |
 | **12/10/2025** | **`1.1`**  | **Inclusão do GQM — Eficiência de Desempenho (throughput) e critérios**      | **[`@arthrok` — Arthur Alves Melo](https://github.com/arthrok)** | **[`@Davia Aguiar`](https://github.com/davi-aguiar-vieira)** | **12/10/2025**      |
 | **12/10/2025** | **`1.2`**  | **Inclusão do GQM — Adequação Funcional (foco em *Corretude*)**      | **[`@devwallyson `—  Wallyson Souza](https://github.com/devwallyson)** | **[`@Davia Aguiar`](https://github.com/davi-aguiar-vieira)** | **12/10/2025**      |
-| **12/10/2025** | **`1.3`**  | **Inclusão do GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)**      | **[`@fabinsz` - Fábio](https://github.com/fabinsz)** |  | **12/10/2025**      |
+| **12/10/2025** | **`1.3`**  | **Inclusão do GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)**      | **[`@fabinsz` - Fábio](https://github.com/fabinsz)**, **[`@Felipej3ds` - Felipe](https://github.com/Felipej3ds)**| **[`@Felipej3ds`](https://github.com/Felipej3ds)** | **12/10/2025**      |
