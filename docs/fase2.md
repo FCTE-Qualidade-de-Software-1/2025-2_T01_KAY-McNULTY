@@ -78,6 +78,50 @@ O *throughput* indica a **capacidade efetiva** do MEPA: verifica se os **lotes c
 
 ---
 
+## GQM — Adequação Funcional (foco em *Corretude*)
+
+> **Relação com a Fase 1:** A Fase 1 estabeleceu a **Adequação Funcional** como a principal prioridade, pois a função central do MEPA é gerar recomendações que levem à economia de recursos. Uma recomendação incorreta não apenas anula o propósito do software, como pode causar prejuízos financeiros, tornando a **corretude** dos cálculos e das lógicas de negócio um requisito não-negociável.
+> *(Anchor sugerido: [Fase 1 — Adequação Funcional (Functional Suitability)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#adequacao-funcional-functional-suitability))*
+
+### Goal (G-AF-01)
+
+Analisar o **módulo de geração de recomendações** do MEPA, com o propósito de **controlar e validar** a sua **adequação funcional**, do ponto de vista do **gestor de energia (usuário final)**, no contexto de um **conjunto de dados de teste com resultados conhecidos (oracle)**.
+
+### Questions
+
+  - **Q-AF-01:** As recomendações geradas pelo sistema são **corretas** quando comparadas a um gabarito validado?
+  - **Q-AF-02:** O sistema cobre todos os **cenários e regras contratuais** especificados como requisitos?
+  - **Q-AF-03:** Qual a **robustez** do sistema ao processar dados de entrada válidos, mas complexos ou atípicos (casos de borda)?
+
+### Métricas candidatas
+
+  - **M-AF-01 — Taxa de Corretude (Accuracy):** Percentual de recomendações corretas em um dataset de validação.
+  - **M-AF-02 — Cobertura de Requisitos Funcionais por Testes:** Percentual de requisitos funcionais que possuem casos de teste automatizados para verificá-los.
+  - **M-AF-03 — Taxa de Falhas em Casos de Borda:** Percentual de falhas (erros, exceções) ao processar um conjunto de dados com casos de borda conhecidos.
+
+### Por que medir *Corretude*
+
+A *corretude* é a materialização da principal proposta de valor do MEPA. Medir essa característica de forma objetiva, comparando a saída do software com um "oracle" (um conjunto de resultados esperados, calculados manualmente ou por um sistema de referência), é a única forma de garantir que o software cumpre sua função primária e gera confiança para o usuário final.
+
+### Critérios & interpretação
+
+  - **Leitura integrada:** Uma alta taxa de corretude (M-AF-01) só é confiável se a cobertura de requisitos (M-AF-02) também for alta. Uma baixa taxa de falhas em casos de borda (M-AF-03) indica que o sistema é robusto e não apenas funciona para os "casos felizes".
+  - **De onde vêm os “valores”?**
+      - **O "oracle":** A definição de "correto" virá de um conjunto de cenários (faturas, contratos, regras) cujo resultado ótimo é pré-calculado e validado por especialistas no domínio de energia elétrica. Este é o principal artefato para a medição.
+      - **Requisitos:** Os requisitos funcionais definidos na Fase 1 e na documentação do projeto determinam o escopo do que deve ser testado (completude).
+  - **Quando definimos números concretos:** Na **Fase 3**, o *baseline* será estabelecido ao executar os testes contra o oracle. A meta ideal para a corretude é 100%, e qualquer desvio exigirá uma análise de causa raiz.
+
+#### Referências e leitura por métrica
+
+  - **M-AF-01 — Taxa de Corretude (Accuracy)** **Referência:** ISO/IEC 25023 (Corretude Funcional) [4].  
+    **Interpretação:** *Acima* (próximo de 100%) = o sistema é confiável. *Abaixo* = existem falhas na lógica de negócio que precisam ser corrigidas com urgência. A análise dos casos incorretos é mais importante que o número em si.
+
+  - **M-AF-02 — Cobertura de Requisitos Funcionais por Testes** **Referência:** ISO/IEC 25023 (Completude Funcional) [4].  
+    **Interpretação:** *Acima* = alta confiança de que as funcionalidades implementadas foram verificadas. *Abaixo* = existem partes do sistema sem validação explícita, representando um risco de comportamento inesperado ou incorreto.
+
+  - **M-AF-03 — Taxa de Falhas em Casos de Borda** **Referência:** ISO/IEC 25023 (Robustez, como subcaracterística de Confiabilidade, mas aplicável à validação funcional) [4].  
+    **Interpretação:** *Acima* (taxa de falhas próxima de 0%) = o sistema lida bem com a complexidade do mundo real. *Abaixo* (taxa de falhas \> 0%) = indica fragilidades no tratamento de entradas ou na lógica, que podem levar a paradas inesperadas em produção.
+---    
 ## Referências Bibliográficas
 1. <a id="ref1"></a>**Basili, V. R.; Rombach, H. D.** The TAME Project: Towards Improvement-Oriented Software Environments. *IEEE Transactions on Software Engineering*, 14(6), 1988.  
 2. <a id="ref2"></a>**ISO/IEC 15939** — *Systems and Software Engineering — Measurement Process* (2017).  
@@ -101,3 +145,4 @@ O *throughput* indica a **capacidade efetiva** do MEPA: verifica se os **lotes c
 |:-------------:|:----------:|:------------------------------------------------------------------------------|:------------------------------------------------------------:|:----------------------------------------------------------:|:-------------------:|
 | **12/10/2025** | **`1.0`**  | **Fase 2 — versão inicial (*Introdução, Objetivo e Metodologia*)**           | **[`@arthrok` — Arthur Alves Melo](https://github.com/arthrok)** | **[`@Fabio`](https://github.com/fabinsz)**                 | **12/10/2025**      |
 | **12/10/2025** | **`1.1`**  | **Inclusão do GQM — Eficiência de Desempenho (throughput) e critérios**      | **[`@arthrok` — Arthur Alves Melo](https://github.com/arthrok)** | **[`@Davia Aguiar`](https://github.com/davi-aguiar-vieira)** | **12/10/2025**      |
+| **12/10/2025** | **`1.2`**  | **Inclusão do GQM — Adequação Funcional (foco em *Corretude*)**      | **[`@devwallyson —  Wallyson Souza](https://github.com/arthrok)** | **[`@Davia Aguiar`](https://github.com/davi-aguiar-vieira)** | **12/10/2025**      |
