@@ -1,4 +1,4 @@
-# Fase 2 — Planejamento de Medição (top-down, com rastreabilidade)
+# Fase 2 — Planejamento de Medição
 
 ## Introdução
 Com base no que foi priorizado na Fase 1 — **adequação funcional**, **eficiência de desempenho** e **manutenibilidade** — esta fase se limita a **planejar a medição**: definir o que será medido, por que será medido e como interpretar os resultados de forma rastreável. O produto aqui é um conjunto de **metas, perguntas e métricas candidatas**, acompanhado de **critérios de leitura** por qualidade. Este planejamento servirá de **base direta para a Fase 3**, quando serão definidos os meios de execução (ambientes, ferramentas e procedimentos).
@@ -31,7 +31,7 @@ Para esta fase, iremos **empregar o GQM (Goal–Question–Metric)** como estrut
 ## GQM — Eficiência de Desempenho (foco em *Throughput*)
 
 > **Relação com a Fase 1:** a Fase 1 definiu **Eficiência de Desempenho** como prioridade alta e destacou a necessidade de **processar grandes volumes rapidamente** para não atrasar decisões administrativas. O *throughput* materializa “**quanto processamos no tempo disponível**”.  
-> *(Anchor sugerido: [Fase 1 — Eficiência de Desempenho (Performance Efficiency)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#eficiencia-de-desempenho-performance-efficiency)).*
+> *([Fase 1 — Eficiência de Desempenho (Performance Efficiency)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#eficiencia-de-desempenho-performance-efficiency)).*
 
 ### Goal (G-PE-01)
 Analisar o fluxo **analisar→recomendar** do MEPA, com o propósito de **entender e controlar** a **eficiência de desempenho**, do ponto de vista da **equipe de engenharia e operações**, no contexto de **cargas representativas e ambiente de referência**.
@@ -75,7 +75,7 @@ O *throughput* indica a **capacidade efetiva** do MEPA: verifica se os **lotes c
 ## GQM — Adequação Funcional (foco em *Corretude*)
 
 > **Relação com a Fase 1:** A Fase 1 estabeleceu a **Adequação Funcional** como a principal prioridade, pois a função central do MEPA é gerar recomendações que levem à economia de recursos. Uma recomendação incorreta não apenas anula o propósito do software, como pode causar prejuízos financeiros, tornando a **corretude** dos cálculos e das lógicas de negócio um requisito não-negociável.
-> *(Anchor sugerido: [Fase 1 — Adequação Funcional (Functional Suitability)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#adequacao-funcional-functional-suitability))*
+> *([Fase 1 — Adequação Funcional (Functional Suitability)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#adequacao-funcional-functional-suitability))*
 
 ### Goal (G-AF-01)
 
@@ -119,7 +119,7 @@ A *corretude* é a materialização da principal proposta de valor do MEPA. Medi
 ## GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)
 
 >**Relação com a Fase 1:** A Fase 1 definiu Manutenibilidade como prioridade média, destacando a necessidade de o sistema ser **facilmente modificável** devido à constante mudança regulatória no domínio de energia e **analisável/compreensível** para atrair e reter contribuições da comunidade de software livre.
->*(Anchor sugerido: [Fase 1 — Adequação Funcional (Functional Suitability)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#Manutenibilidade-(Maintainability)))*
+>*([Fase 1 — Adequação Funcional (Functional Suitability)](https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#Manutenibilidade-(Maintainability)))*
 
 ### Goal (G-MT-01)
 
@@ -173,6 +173,7 @@ Um **alto** Índice de Manutenibilidade (**M-MT-01**) e uma **baixa** Complexida
 | **M-MT-02** — Complexidade Ciclomática Média | ISO/IEC 25023 (Analisabilidade)[4] | **Baixa** (Ideal) = Código simples, fácil de testar. **Alta** (Atenção) = Funções muito grandes/complexas; propensas a falhas. |
 | **M-MT-03** — Cobertura de Teste de Código | ISO/IEC 25023 (Testabilidade)[4] | **Alta** (Ideal) = Modificações seguras; alta proteção contra regressões. **Baixa** = Risco de quebrar funcionalidades existentes. |
 | **M-MT-04** — Taxa de Dívida Técnica | ISO/IEC 25023 (Modificabilidade)[4] | **Baixa** (Ideal) = Custo de manutenção baixo. **Alta** = Alto esforço e tempo gastos na manutenção. |
+
 ---
 
 ## Referências Bibliográficas
