@@ -15,6 +15,7 @@ nav:
         - Relatório: fase4/adequacao-funcional/relatorio.md
         - Casos de Teste: fase4/adequacao-funcional/casos-de-teste.md
       - Manutenibilidade: fase4/manutenibilidade.md
+      - Eficiência e Desempenho: fase4/eficiencia-e-desempenho.md
 
 
 theme:
