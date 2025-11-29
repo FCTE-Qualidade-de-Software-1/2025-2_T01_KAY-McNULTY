@@ -1,0 +1,2386 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação da Análise de Qualidade sobre o MEPA">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../casos-de-teste/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Relatório - Kay McNulty - MEPA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#relatorio-de-teste-de-qualidade-adequacao-funcional" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Kay McNulty - MEPA" class="md-header__button md-logo" aria-label="Kay McNulty - MEPA" data-md-component="logo">
+      
+  <img src="../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kay McNulty - MEPA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Relatório
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_KAY-McNULTY" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Kay McNulty - MEPA" class="md-nav__button md-logo" aria-label="Kay McNulty - MEPA" data-md-component="logo">
+      
+  <img src="../../../images/logo.png" alt="logo">
+
+    </a>
+    Kay McNulty - MEPA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_KAY-McNULTY" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geral
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geral
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_2" id="__nav_1_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adequação Funcional
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Adequação Funcional
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mepa-energia-api-mec-energia-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MEPA Energia - API (mec-energia-api)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-informacoes-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. INFORMAÇÕES DO PROJETO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sumario-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SUMÁRIO EXECUTIVO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. SUMÁRIO EXECUTIVO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultados-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados Principais:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fundamentacao-teorica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. FUNDAMENTAÇÃO TEÓRICA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. FUNDAMENTAÇÃO TEÓRICA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-adequacao-funcional-isoiec-25010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Adequação Funcional (ISO/IEC 25010)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-metricas-utilizadas-baseadas-na-fase-3-e-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Métricas Utilizadas (Baseadas na Fase 3 e 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. METODOLOGIA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. METODOLOGIA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ambiente-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Ambiente de Teste
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-abordagem-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Abordagem de Testes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-procedimento-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Procedimento de Execução
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-analise-dos-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. ANÁLISE DOS REQUISITOS FUNCIONAIS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. ANÁLISE DOS REQUISITOS FUNCIONAIS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-requisitos-identificados-na-documentacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Requisitos Identificados na Documentação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Requisitos Identificados na Documentação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-casos-de-uso-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 Casos de Uso Principais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-entidades-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Entidades do Sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mapeamento-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. MAPEAMENTO DE TESTES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. MAPEAMENTO DE TESTES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-estrutura-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Estrutura de Testes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-distribuicao-de-testes-por-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Distribuição de Testes por Módulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-resultados-da-execucao-dos-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. RESULTADOS DA EXECUÇÃO DOS TESTES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. RESULTADOS DA EXECUÇÃO DOS TESTES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-resultado-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Resultado Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-cobertura-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Cobertura de Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-analise-detalhada-testes-de-recomendacao-nucleo-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. ANÁLISE DETALHADA - TESTES DE RECOMENDAÇÃO (NÚCLEO FUNCIONAL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. ANÁLISE DETALHADA - TESTES DE RECOMENDAÇÃO (NÚCLEO FUNCIONAL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-testes-de-acuracia-test_recommendation_accuracypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Testes de Acurácia (test_recommendation_accuracy.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-exemplos-de-casos-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Exemplos de Casos de Teste
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 Exemplos de Casos de Teste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-test_rec1txt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: test_rec1.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-12-test_rec12txt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 12: test_rec12.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-20-test_rec20txt-maior-diferenca-percentual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 20: test_rec20.txt (Maior diferença percentual)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-60-test_rec60txt-maior-diferenca-absoluta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 60: test_rec60.txt (Maior diferença absoluta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-analise-estatistica-dos-testes-de-recomendacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Análise Estatística dos Testes de Recomendação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-analise-detalhada-outros-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. ANÁLISE DETALHADA - OUTROS MÓDULOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. ANÁLISE DETALHADA - OUTROS MÓDULOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-testes-de-contratos-e-faturas-46-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Testes de Contratos e Faturas (46 testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-testes-de-universidades-e-unidades-consumidoras-23-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Testes de Universidades e Unidades Consumidoras (23 testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-testes-de-tarifas-e-distribuidoras-9-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Testes de Tarifas e Distribuidoras (9 testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-testes-de-usuarios-e-permissoes-12-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Testes de Usuários e Permissões (12 testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-testes-de-utilitarios-64-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 Testes de Utilitários (64 testes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-calculo-das-metricas-de-adequacao-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. CÁLCULO DAS MÉTRICAS DE ADEQUAÇÃO FUNCIONAL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. CÁLCULO DAS MÉTRICAS DE ADEQUAÇÃO FUNCIONAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-m-af-01-taxa-de-corretude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 M-AF-01: Taxa de Corretude
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-m-af-02-cobertura-de-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 M-AF-02: Cobertura de Requisitos Funcionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-m-af-03-taxa-de-falhas-em-casos-de-borda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 M-AF-03: Taxa de Falhas em Casos de Borda
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-analise-de-lacunas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. ANÁLISE DE LACUNAS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. ANÁLISE DE LACUNAS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-funcionalidades-nao-testadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Funcionalidades Não Testadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-recomendacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Recomendações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-rastreabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. RASTREABILIDADE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. RASTREABILIDADE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-matriz-de-rastreabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Matriz de Rastreabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. EXECUÇÃO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. EXECUÇÃO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-comando-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Comando de Execução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-evidencia-de-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Evidência de Cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-analise-de-conformidade-com-isoiec-25010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. ANÁLISE DE CONFORMIDADE COM ISO/IEC 25010
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. ANÁLISE DE CONFORMIDADE COM ISO/IEC 25010">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-completude-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Completude Funcional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-corretude-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Corretude Funcional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-aptidao-funcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Aptidão Funcional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-conclusoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. CONCLUSÕES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. CONCLUSÕES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-sintese-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Síntese dos Resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-pontos-fortes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Pontos Fortes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-areas-de-melhoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 Áreas de Melhoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-recomendacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.4 Recomendações
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155-avaliacao-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5 Avaliação Final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-assinaturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. ASSINATURAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. REFERÊNCIAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casos-de-teste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manutenibilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eficiencia-e-desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência e Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="relatorio-de-teste-de-qualidade-adequacao-funcional">RELATÓRIO DE TESTE DE QUALIDADE - ADEQUAÇÃO FUNCIONAL<a class="headerlink" href="#relatorio-de-teste-de-qualidade-adequacao-funcional" title="Permanent link">&para;</a></h1>
+<h2 id="mepa-energia-api-mec-energia-api">MEPA Energia - API (mec-energia-api)<a class="headerlink" href="#mepa-energia-api-mec-energia-api" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="1-informacoes-do-projeto">1. INFORMAÇÕES DO PROJETO<a class="headerlink" href="#1-informacoes-do-projeto" title="Permanent link">&para;</a></h2>
+<p><strong>Projeto:</strong> MEPA - Monitoramento de Energia em Plataforma Aberta<br />
+<strong>Componente Avaliado:</strong> mec-energia-api (Backend - API REST)<br />
+<strong>Data da Avaliação:</strong> 26 de novembro de 2025<br />
+<strong>Característica de Qualidade:</strong> Adequação Funcional (ISO/IEC 25010)<br />
+<strong>Normas Aplicadas:</strong> ISO/IEC 25010, ISO/IEC 25023, ISO/IEC 15939</p>
+<hr />
+<h2 id="2-sumario-executivo">2. SUMÁRIO EXECUTIVO<a class="headerlink" href="#2-sumario-executivo" title="Permanent link">&para;</a></h2>
+<p>Este relatório documenta a avaliação de adequação funcional do sistema MEPA Energia, especificamente da API backend (mec-energia-api). A avaliação foi realizada utilizando os testes automatizados existentes no projeto, seguindo as métricas definidas nas fases 3 e 4 do documento.</p>
+<h3 id="resultados-principais">Resultados Principais:<a class="headerlink" href="#resultados-principais" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Total de Testes Executados:</strong> 259 testes</li>
+<li><strong>Testes Aprovados:</strong> 258 (99,61%)</li>
+<li><strong>Testes Reprovados:</strong> 0 (0%)</li>
+<li><strong>Testes Ignorados:</strong> 1 (0,39%)</li>
+<li><strong>Cobertura de Código:</strong> 68% (no modo completo de testes)</li>
+<li><strong>Tempo Total de Execução:</strong> 93,55 segundos</li>
+</ul>
+<hr />
+<h2 id="3-fundamentacao-teorica">3. FUNDAMENTAÇÃO TEÓRICA<a class="headerlink" href="#3-fundamentacao-teorica" title="Permanent link">&para;</a></h2>
+<h3 id="31-adequacao-funcional-isoiec-25010">3.1 Adequação Funcional (ISO/IEC 25010)<a class="headerlink" href="#31-adequacao-funcional-isoiec-25010" title="Permanent link">&para;</a></h3>
+<p>A adequação funcional é uma característica de qualidade de software que representa o grau em que um produto ou sistema fornece funções que atendem as necessidades declaradas e implícitas quando usado sob condições especificadas.</p>
+<p>A adequação funcional é subdividida em três subcaracterísticas:</p>
+<ol>
+<li>
+<p><strong>Completude Funcional:</strong> Grau em que o conjunto de funções cobre todas as tarefas e objetivos do usuário especificados.</p>
+</li>
+<li>
+<p><strong>Corretude Funcional:</strong> Grau em que um produto ou sistema fornece os resultados corretos com o grau de precisão necessário.</p>
+</li>
+<li>
+<p><strong>Aptidão Funcional:</strong> Grau em que as funções facilitam a realização de tarefas e objetivos especificados.</p>
+</li>
+</ol>
+<h3 id="32-metricas-utilizadas-baseadas-na-fase-3-e-4">3.2 Métricas Utilizadas (Baseadas na Fase 3 e 4)<a class="headerlink" href="#32-metricas-utilizadas-baseadas-na-fase-3-e-4" title="Permanent link">&para;</a></h3>
+<p>Segundo a documentação do projeto (Fase 3 - Planejamento da Avaliação), foram definidas as seguintes métricas para adequação funcional:</p>
+<p><strong>Goal G-AF-01:</strong> Avaliar se o sistema fornece recomendações corretas, completas e robustas em comparação a resultados esperados (oracle).</p>
+<p><strong>Métricas Aplicadas:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Descrição</th>
+<th>Critério de Julgamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M-AF-01</strong></td>
+<td>Taxa de Corretude</td>
+<td>&gt;= 95% de acertos</td>
+</tr>
+<tr>
+<td><strong>M-AF-02</strong></td>
+<td>Cobertura de Requisitos Funcionais</td>
+<td>&gt;= 80% de requisitos testados</td>
+</tr>
+<tr>
+<td><strong>M-AF-03</strong></td>
+<td>Taxa de Falhas em Casos de Borda</td>
+<td>&lt;= 5% de falhas em dados atípicos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-metodologia">4. METODOLOGIA<a class="headerlink" href="#4-metodologia" title="Permanent link">&para;</a></h2>
+<h3 id="41-ambiente-de-teste">4.1 Ambiente de Teste<a class="headerlink" href="#41-ambiente-de-teste" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sistema Operacional:</strong> Linux (Container Docker)</li>
+<li><strong>Python:</strong> 3.11.9</li>
+<li><strong>Framework de Testes:</strong> pytest 9.0.1</li>
+<li><strong>Django:</strong> 5.1.14</li>
+<li><strong>Banco de Dados de Teste:</strong> SQLite (in-memory)</li>
+<li><strong>Infraestrutura:</strong> Docker Compose</li>
+</ul>
+<h3 id="42-abordagem-de-testes">4.2 Abordagem de Testes<a class="headerlink" href="#42-abordagem-de-testes" title="Permanent link">&para;</a></h3>
+<p>A avaliação foi realizada utilizando os testes automatizados já implementados no projeto. Os testes cobrem:</p>
+<ol>
+<li><strong>Testes de Unidade:</strong> Validação de funções e métodos individuais</li>
+<li><strong>Testes de Integração:</strong> Validação da interação entre componentes</li>
+<li><strong>Testes de API:</strong> Validação dos endpoints REST</li>
+<li><strong>Testes de Recomendação:</strong> Validação do algoritmo principal do sistema</li>
+</ol>
+<h3 id="43-procedimento-de-execucao">4.3 Procedimento de Execução<a class="headerlink" href="#43-procedimento-de-execucao" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Análise da documentação do projeto (<a href="https://gitlab.com/lappis-unb/projetos-energia/mec-energia/documentacao">doc</a>)</li>
+<li>Estudo das métricas de adequação funcional (Fases 3 e 4)</li>
+<li>Mapeamento dos testes existentes em <a href="https://gitlab.com/lappis-unb/projetos-energia/mec-energia/mec-energia-api/-/tree/develop/tests?ref_type=heads">mec-energia-api/tests/</a></li>
+<li>Execução da suite completa de testes</li>
+<li>Coleta e análise de métricas</li>
+<li>Geração do relatório</li>
+</ol>
+<hr />
+<h2 id="5-analise-dos-requisitos-funcionais">5. ANÁLISE DOS REQUISITOS FUNCIONAIS<a class="headerlink" href="#5-analise-dos-requisitos-funcionais" title="Permanent link">&para;</a></h2>
+<h3 id="51-requisitos-identificados-na-documentacao">5.1 Requisitos Identificados na Documentação<a class="headerlink" href="#51-requisitos-identificados-na-documentacao" title="Permanent link">&para;</a></h3>
+<p>Baseado na documentação do projeto (<a href="https://gitlab.com/lappis-unb/projetos-energia/mec-energia/documentacao">doc</a>), o sistema MEPA possui os seguintes grupos de funcionalidades:</p>
+<h4 id="511-casos-de-uso-principais">5.1.1 Casos de Uso Principais<a class="headerlink" href="#511-casos-de-uso-principais" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Caso de Uso</th>
+<th>Usuário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.x</td>
+<td>Gerenciar Universidades</td>
+<td>Administrador do Sistema</td>
+</tr>
+<tr>
+<td>2.x</td>
+<td>Gerenciar Usuarios Administradores</td>
+<td>Administrador do Sistema</td>
+</tr>
+<tr>
+<td>3.x</td>
+<td>Gerenciar Usuarios Administradores da Universidade</td>
+<td>Administrador da Universidade</td>
+</tr>
+<tr>
+<td>4.x</td>
+<td>Gerenciar Usuarios Tecnicos</td>
+<td>Administrador da Universidade</td>
+</tr>
+<tr>
+<td>5.x</td>
+<td>Gerenciar Unidades Consumidoras</td>
+<td>Administrador/Tecnico</td>
+</tr>
+<tr>
+<td>6.x</td>
+<td>Gerenciar Contratos</td>
+<td>Administrador/Tecnico</td>
+</tr>
+<tr>
+<td>7.x</td>
+<td>Gerenciar Faturas</td>
+<td>Administrador/Tecnico</td>
+</tr>
+<tr>
+<td>8.x</td>
+<td>Gerenciar Distribuidoras</td>
+<td>Administrador/Tecnico</td>
+</tr>
+<tr>
+<td>9.x</td>
+<td>Gerenciar Tarifas</td>
+<td>Administrador/Tecnico</td>
+</tr>
+<tr>
+<td>10.x</td>
+<td>Visualizar Pendências</td>
+<td>Administrador/Técnico</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Visualizar Recomendações</td>
+<td>Administrador/Técnico</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total de Casos de Uso Identificados:</strong> 47 casos de uso específicos</p>
+<h3 id="52-entidades-do-sistema">5.2 Entidades do Sistema<a class="headerlink" href="#52-entidades-do-sistema" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Universidade:</strong> Entidade de mais alto nivel</li>
+<li><strong>Unidade Consumidora:</strong> Local que consome energia</li>
+<li><strong>Contrato:</strong> Relacao entre UC e distribuidora</li>
+<li><strong>Fatura:</strong> Documento mensal de consumo</li>
+<li><strong>Distribuidora:</strong> Fornecedora de energia</li>
+<li><strong>Tarifas:</strong> Valores cobrados pela distribuidora</li>
+<li><strong>Usuário:</strong> Usuários do sistema (vários perfis)</li>
+<li><strong>Recomendação:</strong> Resultado da análise de otimização</li>
+</ol>
+<hr />
+<h2 id="6-mapeamento-de-testes">6. MAPEAMENTO DE TESTES<a class="headerlink" href="#6-mapeamento-de-testes" title="Permanent link">&para;</a></h2>
+<h3 id="61-estrutura-de-testes">6.1 Estrutura de Testes<a class="headerlink" href="#61-estrutura-de-testes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>tests/
+├── contracts/          # Testes de contratos e faturas
+│   ├── contract/       # 38 testes
+│   └── sheet/          # 8 testes
+├── recommendation/     # Testes do algoritmo de recomendacao
+│   └── 102 testes (96 de acuracia + 6 outros)
+├── tariffs/            # Testes de tarifas e distribuidoras
+│   ├── distributors/   # 4 testes
+│   └── tariff/         # 5 testes
+├── universities/       # Testes de universidades e UCs
+│   ├── consumer_unit/  # 13 testes
+│   └── university/     # 10 testes
+├── users/              # Testes de usuarios
+│   └── 6 testes
+├── users_permissions/  # Testes de permissoes
+│   └── 3 testes
+└── utils/              # Testes de utilitarios
+    └── 64 testes diversos
+</code></pre></div>
+<h3 id="62-distribuicao-de-testes-por-modulo">6.2 Distribuição de Testes por Módulo<a class="headerlink" href="#62-distribuicao-de-testes-por-modulo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Número de Testes</th>
+<th>Percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recommendation (Recomendações)</td>
+<td>102</td>
+<td>39,38%</td>
+</tr>
+<tr>
+<td>Utils (Utilitários)</td>
+<td>64</td>
+<td>24,71%</td>
+</tr>
+<tr>
+<td>Contracts (Contratos/Faturas)</td>
+<td>46</td>
+<td>17,76%</td>
+</tr>
+<tr>
+<td>Universities (Universidades/UCs)</td>
+<td>23</td>
+<td>8,88%</td>
+</tr>
+<tr>
+<td>Tariffs (Tarifas/Distribuidoras)</td>
+<td>9</td>
+<td>3,47%</td>
+</tr>
+<tr>
+<td>Users (Usuários)</td>
+<td>9</td>
+<td>3,47%</td>
+</tr>
+<tr>
+<td>Settings e outros</td>
+<td>6</td>
+<td>2,32%</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>259</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-resultados-da-execucao-dos-testes">7. RESULTADOS DA EXECUÇÃO DOS TESTES<a class="headerlink" href="#7-resultados-da-execucao-dos-testes" title="Permanent link">&para;</a></h2>
+<h3 id="71-resultado-geral">7.1 Resultado Geral<a class="headerlink" href="#71-resultado-geral" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>======================== RESULTADO DA SUITE COMPLETA ========================
+Total de Testes: 259
+Aprovados: 258
+Reprovados: 0
+Ignorados: 1
+Taxa de Sucesso: 99,61%
+Tempo Total: 93,55 segundos
+=============================================================================
+</code></pre></div>
+<img alt="Resultado" src="../execucuao_testes.png" /></p>
+<h3 id="72-cobertura-de-codigo">7.2 Cobertura de Código<a class="headerlink" href="#72-cobertura-de-codigo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Name                                              Stmts   Miss  Cover
+---------------------------------------------------------------------
+contracts/models.py                                  96     13    86%
+contracts/serializers.py                             97      5    95%
+contracts/services.py                                56      2    96%
+contracts/signals.py                                 39     16    59%
+contracts/utils.py                                   18      1    94%
+contracts/validators.py                              49      9    82%
+contracts/views.py                                  224     82    63%
+...
+recommendation/blue.py                               65      0   100%
+recommendation/calculator.py                         57     41    28%
+recommendation/green.py                              64      0   100%
+recommendation/models.py                             22      0   100%
+recommendation/recommendation_utils.py              154     72    53%
+...
+TOTAL                                              3175   1015    68%
+---------------------------------------------------------------------
+</code></pre></div>
+<hr />
+<h2 id="8-analise-detalhada-testes-de-recomendacao-nucleo-funcional">8. ANÁLISE DETALHADA - TESTES DE RECOMENDAÇÃO (NÚCLEO FUNCIONAL)<a class="headerlink" href="#8-analise-detalhada-testes-de-recomendacao-nucleo-funcional" title="Permanent link">&para;</a></h2>
+<h3 id="81-testes-de-acuracia-test_recommendation_accuracypy">8.1 Testes de Acurácia (test_recommendation_accuracy.py)<a class="headerlink" href="#81-testes-de-acuracia-test_recommendation_accuracypy" title="Permanent link">&para;</a></h3>
+<p>Este é o conjunto de testes mais crítico, pois valida a funcionalidade principal do sistema: gerar recomendações corretas de otimização de contratos de energia.</p>
+<p><strong>Metodologia dos Testes:</strong>
+- Utiliza arquivos de dados reais (96 cenarios de teste)
+- Compara resultados gerados com valores esperados (oracle)
+- Valida tarifa recomendada, demandas e custos totais
+- Tolerancia de 5% ou R$ 50.000,00</p>
+<p><strong>Resultados:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total de Cenários Testados</td>
+<td>96</td>
+</tr>
+<tr>
+<td>Cenários Aprovados</td>
+<td>96</td>
+</tr>
+<tr>
+<td>Cenários Reprovados</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Taxa de Acerto</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Maior Diferença Absoluta</td>
+<td>R$ 1.026,30</td>
+</tr>
+<tr>
+<td>Maior Diferença Percentual</td>
+<td>0,65%</td>
+</tr>
+<tr>
+<td>Tempo Total de Execução</td>
+<td>74,95 segundos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-exemplos-de-casos-de-teste">8.2 Exemplos de Casos de Teste<a class="headerlink" href="#82-exemplos-de-casos-de-teste" title="Permanent link">&para;</a></h3>
+<h4 id="caso-1-test_rec1txt">Caso 1: test_rec1.txt<a class="headerlink" href="#caso-1-test_rec1txt" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Tarifa recomendada/esperada: G/G (Verde/Verde)
+Demanda ponta recomendada: 0 kW
+Demanda fora ponta: 929 kW
+Custo total obtido: R$ 1.464.322,42
+Custo total esperado: R$ 1.464.322,42
+Diferenca: R$ 0,00
+Diferenca percentual: 0,00%
+Status: PASSOU
+</code></pre></div>
+<h4 id="caso-12-test_rec12txt">Caso 12: test_rec12.txt<a class="headerlink" href="#caso-12-test_rec12txt" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Tarifa recomendada/esperada: B/B (Azul/Azul)
+Demanda ponta recomendada: 181 kW
+Demanda fora ponta: 229 kW
+Custo total obtido: R$ 616.860,64
+Custo total esperado: R$ 616.860,64
+Diferenca: R$ 0,00
+Diferenca percentual: 0,00%
+Status: PASSOU
+</code></pre></div>
+<h4 id="caso-20-test_rec20txt-maior-diferenca-percentual">Caso 20: test_rec20.txt (Maior diferença percentual)<a class="headerlink" href="#caso-20-test_rec20txt-maior-diferenca-percentual" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Tarifa recomendada/esperada: G/G (Verde/Verde)
+Demanda ponta recomendada: 0 kW
+Demanda fora ponta: 56 kW
+Custo total obtido: R$ 100.820,16
+Custo total esperado: R$ 100.454,48
+Diferença: R$ 365,68
+Diferença percentual: 0,36%
+Status: PASSOU (dentro da tolerância)
+</code></pre></div>
+<h4 id="caso-60-test_rec60txt-maior-diferenca-absoluta">Caso 60: test_rec60.txt (Maior diferença absoluta)<a class="headerlink" href="#caso-60-test_rec60txt-maior-diferenca-absoluta" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Tarifa recomendada/esperada: G/G
+Demanda ponta recomendada: 0 kW
+Demanda fora ponta: 1575 kW
+Custo total obtido: R$ 3.229.893,89
+Custo total esperado: R$ 3.228.867,59
+Diferença: R$ 1.026,30
+Diferença percentual: 0,03%
+Status: PASSOU (dentro da tolerância)
+</code></pre></div>
+<h3 id="83-analise-estatistica-dos-testes-de-recomendacao">8.3 Análise Estatística dos Testes de Recomendação<a class="headerlink" href="#83-analise-estatistica-dos-testes-de-recomendacao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Estatística</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Número de testes com diferença zero</td>
+<td>68 (70,83%)</td>
+</tr>
+<tr>
+<td>Número de testes com diferença &lt; 0,1%</td>
+<td>87 (90,63%)</td>
+</tr>
+<tr>
+<td>Número de testes com diferença &lt; 0,5%</td>
+<td>94 (97,92%)</td>
+</tr>
+<tr>
+<td>Número de testes com diferença &gt;= 0,5%</td>
+<td>2 (2,08%)</td>
+</tr>
+<tr>
+<td>Média das diferenças percentuais</td>
+<td>~0,05%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-analise-detalhada-outros-modulos">9. ANÁLISE DETALHADA - OUTROS MÓDULOS<a class="headerlink" href="#9-analise-detalhada-outros-modulos" title="Permanent link">&para;</a></h2>
+<h3 id="91-testes-de-contratos-e-faturas-46-testes">9.1 Testes de Contratos e Faturas (46 testes)<a class="headerlink" href="#91-testes-de-contratos-e-faturas-46-testes" title="Permanent link">&para;</a></h3>
+<p><strong>Cobertura:</strong></p>
+<ul>
+<li>Criação, leitura, atualização de contratos</li>
+<li>Criação, leitura, atualização de faturas</li>
+<li>Validação de permissões por tipo de usuário</li>
+<li>Importação de faturas via CSV/XLSX</li>
+<li>Validação de datas e valores</li>
+<li>Gráficos de consumo e demanda</li>
+</ul>
+<p><strong>Resultado:</strong> 46/46 testes aprovados (100%)</p>
+<h3 id="92-testes-de-universidades-e-unidades-consumidoras-23-testes">9.2 Testes de Universidades e Unidades Consumidoras (23 testes)<a class="headerlink" href="#92-testes-de-universidades-e-unidades-consumidoras-23-testes" title="Permanent link">&para;</a></h3>
+<p><strong>Cobertura:</strong></p>
+<ul>
+<li>Criação e edição de universidades</li>
+<li>Criação e edição de unidades consumidoras</li>
+<li>Validação de restrições (nomes e códigos únicos)</li>
+<li>Permissões de acesso por usuário</li>
+<li>Integridade referencial</li>
+</ul>
+<p><strong>Resultado:</strong> 23/23 testes aprovados (100%)</p>
+<h3 id="93-testes-de-tarifas-e-distribuidoras-9-testes">9.3 Testes de Tarifas e Distribuidoras (9 testes)<a class="headerlink" href="#93-testes-de-tarifas-e-distribuidoras-9-testes" title="Permanent link">&para;</a></h3>
+<p><strong>Cobertura:</strong></p>
+<ul>
+<li>Criação de tarifas Azul e Verde</li>
+<li>Validação de campos obrigatórios</li>
+<li>Associação com distribuidoras</li>
+<li>Contagem de UCs por distribuidora</li>
+</ul>
+<p><strong>Resultado:</strong> 9/9 testes aprovados (100%)</p>
+<h3 id="94-testes-de-usuarios-e-permissoes-12-testes">9.4 Testes de Usuários e Permissões (12 testes)<a class="headerlink" href="#94-testes-de-usuarios-e-permissoes-12-testes" title="Permanent link">&para;</a></h3>
+<p><strong>Cobertura:</strong></p>
+<ul>
+<li>Criação de usuários (admin, técnico, convidado)</li>
+<li>Sistema de autenticação</li>
+<li>Permissões por tipo de usuário</li>
+<li>Unidades consumidoras favoritas</li>
+<li>Requisições de registro</li>
+</ul>
+<p><strong>Resultado:</strong> 12/12 testes aprovados (100%)</p>
+<h3 id="95-testes-de-utilitarios-64-testes">9.5 Testes de Utilitários (64 testes)<a class="headerlink" href="#95-testes-de-utilitarios-64-testes" title="Permanent link">&para;</a></h3>
+<p><strong>Cobertura:</strong></p>
+<ul>
+<li>Validação de CNPJ</li>
+<li>Manipulação de datas</li>
+<li>Validação de email</li>
+<li>Utilitários de faturas</li>
+<li>Logging</li>
+</ul>
+<p><strong>Resultado:</strong> 64/64 testes aprovados (100%)</p>
+<hr />
+<h2 id="10-calculo-das-metricas-de-adequacao-funcional">10. CÁLCULO DAS MÉTRICAS DE ADEQUAÇÃO FUNCIONAL<a class="headerlink" href="#10-calculo-das-metricas-de-adequacao-funcional" title="Permanent link">&para;</a></h2>
+<h3 id="101-m-af-01-taxa-de-corretude">10.1 M-AF-01: Taxa de Corretude<a class="headerlink" href="#101-m-af-01-taxa-de-corretude" title="Permanent link">&para;</a></h3>
+<p><strong>Definição:</strong> Percentual de funções que produzem resultados corretos em relação aos esperados.</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code>Taxa de Corretude = (Testes Aprovados / Total de Testes) x 100
+</code></pre></div></p>
+<p><strong>Cálculo:</strong>
+<div class="highlight"><pre><span></span><code>Taxa de Corretude = (258 / 259) x 100 = 99,61%
+</code></pre></div></p>
+<p><strong>Critério:</strong> &gt;= 95%<br />
+<strong>Resultado:</strong> <strong>CONFORME</strong> (99,61% &gt; 95%)</p>
+<h3 id="102-m-af-02-cobertura-de-requisitos-funcionais">10.2 M-AF-02: Cobertura de Requisitos Funcionais<a class="headerlink" href="#102-m-af-02-cobertura-de-requisitos-funcionais" title="Permanent link">&para;</a></h3>
+<p><strong>Definição:</strong> Percentual de requisitos funcionais cobertos por testes automatizados.</p>
+<p><strong>Análise:</strong></p>
+<ul>
+<li>Total de casos de uso identificados: 47</li>
+<li>Grupos funcionais testados:</li>
+<li>Universidades: SIM</li>
+<li>Unidades Consumidoras: SIM</li>
+<li>Contratos: SIM</li>
+<li>Faturas: SIM</li>
+<li>Distribuidoras: SIM</li>
+<li>Tarifas: SIM</li>
+<li>Usuários: SIM</li>
+<li>Recomendações: SIM</li>
+<li>Permissões: SIM</li>
+<li>Importação de dados: SIM</li>
+</ul>
+<p><strong>Mapeamento Casos de Uso x Testes:</strong>| Caso de Uso | Testado | Numero de Testes |
+|-------------|---------|------------------|
+| 1.x - Gerenciar Universidades | SIM | 10 |
+| 3.x, 4.x - Gerenciar Usuários | SIM | 12 |
+| 5.x - Gerenciar UCs | SIM | 13 |
+| 6.x - Gerenciar Contratos | SIM | 17 |
+| 7.x - Gerenciar Faturas | SIM | 29 |
+| 8.x - Gerenciar Distribuidoras | SIM | 4 |
+| 9.x - Gerenciar Tarifas | SIM | 5 |
+| 11 - Visualizar Recomendações | SIM | 102 |
+| Segurança e Permissões | SIM | 40+ |
+| Importação de Dados | SIM | 8 |
+| Validações e Utilitários | SIM | 64 |</p>
+<p><strong>Cálculo:</strong>
+<div class="highlight"><pre><span></span><code>Requisitos Funcionais Cobertos = 10 grupos principais / 10 grupos totais = 100%
+</code></pre></div></p>
+<p>Todos os casos de uso principais possuem testes correspondentes.</p>
+<p><strong>Critério:</strong> &gt;= 80%<br />
+<strong>Resultado:</strong> <strong>CONFORME</strong> (100% &gt; 80%)</p>
+<h3 id="103-m-af-03-taxa-de-falhas-em-casos-de-borda">10.3 M-AF-03: Taxa de Falhas em Casos de Borda<a class="headerlink" href="#103-m-af-03-taxa-de-falhas-em-casos-de-borda" title="Permanent link">&para;</a></h3>
+<p><strong>Definição:</strong> Percentual de testes que falham ao processar dados atípicos ou casos extremos.</p>
+<p><strong>Análise de Casos de Borda Testados:</strong></p>
+<ul>
+<li>Valores máximos e mínimos de consumo e demanda: TESTADO</li>
+<li>Datas inválidas: TESTADO</li>
+<li>Dados faltantes: TESTADO</li>
+<li>Formatos inválidos (CSV/XLSX): TESTADO</li>
+<li>CNPJ inválido: TESTADO</li>
+<li>Permissões cross-university: TESTADO</li>
+<li>Tarifas expiradas: TESTADO</li>
+<li>Unidades consumidoras inativas: TESTADO</li>
+</ul>
+<p><strong>Testes de Casos de Borda Identificados:</strong></p>
+<ul>
+<li>test_exceeding_values_energybill: PASSOU</li>
+<li>test_invalid_csv_header: PASSOU</li>
+<li>test_invalid_date_format: PASSOU</li>
+<li>test_invalid_number: PASSOU</li>
+<li>test_invalid_cnpj: PASSOU</li>
+<li>test_tarifa_azul_expirada: PASSOU</li>
+<li>test_unidade_consumidora_inativa: PASSOU</li>
+<li>E outros...</li>
+</ul>
+<p><strong>Cálculo:</strong>
+<div class="highlight"><pre><span></span><code>Taxa de Falhas em Casos de Borda = (0 falhas / 30+ casos de borda testados) x 100 = 0%
+</code></pre></div></p>
+<p><strong>Critério:</strong> &lt;= 5%<br />
+<strong>Resultado:</strong> <strong>CONFORME</strong> (0% &lt; 5%)</p>
+<hr />
+<h2 id="11-analise-de-lacunas">11. ANÁLISE DE LACUNAS<a class="headerlink" href="#11-analise-de-lacunas" title="Permanent link">&para;</a></h2>
+<h3 id="111-funcionalidades-nao-testadas">11.1 Funcionalidades Não Testadas<a class="headerlink" href="#111-funcionalidades-nao-testadas" title="Permanent link">&para;</a></h3>
+<p>Análise da cobertura de código revela algumas áreas com menor cobertura:</p>
+<ol>
+<li><strong>recommendation/calculator.py:</strong> 28% de cobertura</li>
+<li>
+<p>Algumas ramificações do algoritmo podem não estar totalmente testadas</p>
+</li>
+<li>
+<p><strong>contracts/views.py:</strong> 63% de cobertura</p>
+</li>
+<li>
+<p>Alguns endpoints de API podem ter cobertura parcial</p>
+</li>
+<li>
+<p><strong>users/models.py:</strong> 69% de cobertura</p>
+</li>
+<li>
+<p>Algumas funcionalidades de usuário podem não estar totalmente testadas</p>
+</li>
+<li>
+<p><strong>Serviços (services.py):</strong> Alguns módulos com 0% de cobertura</p>
+</li>
+<li>tariffs/services.py: 0%</li>
+<li>users/auth.py: 0%</li>
+</ol>
+<h3 id="112-recomendacoes">11.2 Recomendações<a class="headerlink" href="#112-recomendacoes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Aumentar cobertura de testes de API:</strong> Adicionar testes para todos os endpoints REST</li>
+<li><strong>Testar fluxos de autenticação:</strong> Testar recuperação de senha, tokens, etc.</li>
+<li><strong>Testes de integração end-to-end:</strong> Simular fluxos completos de usuário</li>
+<li><strong>Testes de performance:</strong> Validar comportamento sob carga</li>
+<li><strong>Testes de segurança:</strong> Validar proteção contra vulnerabilidades comuns</li>
+</ol>
+<hr />
+<h2 id="12-rastreabilidade">12. RASTREABILIDADE<a class="headerlink" href="#12-rastreabilidade" title="Permanent link">&para;</a></h2>
+<h3 id="121-matriz-de-rastreabilidade">12.1 Matriz de Rastreabilidade<a class="headerlink" href="#121-matriz-de-rastreabilidade" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requisito</th>
+<th>Casos de Uso</th>
+<th>Módulo de Teste</th>
+<th>Número de Testes</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-001: Gerenciar Universidades</td>
+<td>1.1-1.3</td>
+<td>universities/</td>
+<td>10</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-002: Gerenciar Usuários</td>
+<td>2.1-4.4</td>
+<td>users/</td>
+<td>12</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-003: Gerenciar UCs</td>
+<td>5.1-5.4</td>
+<td>universities/consumer_unit/</td>
+<td>13</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-004: Gerenciar Contratos</td>
+<td>6.1-6.4</td>
+<td>contracts/contract/</td>
+<td>17</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-005: Gerenciar Faturas</td>
+<td>7.1-7.5</td>
+<td>contracts/contract/</td>
+<td>29</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-006: Gerenciar Distribuidoras</td>
+<td>8.1-8.4</td>
+<td>tariffs/distributors/</td>
+<td>4</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-007: Gerenciar Tarifas</td>
+<td>9.1-9.5</td>
+<td>tariffs/tariff/</td>
+<td>5</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-008: Visualizar Recomendações</td>
+<td>11</td>
+<td>recommendation/</td>
+<td>102</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-009: Controle de Permissões</td>
+<td>Todos</td>
+<td>users_permissions/</td>
+<td>40+</td>
+<td>TESTADO</td>
+</tr>
+<tr>
+<td>RF-010: Importação de Dados</td>
+<td>7.2</td>
+<td>contracts/sheet/</td>
+<td>8</td>
+<td>TESTADO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-execucao">13. EXECUÇÃO<a class="headerlink" href="#13-execucao" title="Permanent link">&para;</a></h2>
+<h3 id="131-comando-de-execucao">13.1 Comando de Execução<a class="headerlink" href="#131-comando-de-execucao" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mepa-api<span class="w"> </span>pytest<span class="w"> </span>tests/<span class="w"> </span>-v<span class="w"> </span>--tb<span class="o">=</span>short
+</code></pre></div>
+<h3 id="132-evidencia-de-cobertura">13.2 Evidência de Cobertura<a class="headerlink" href="#132-evidencia-de-cobertura" title="Permanent link">&para;</a></h3>
+<p>Relatório de cobertura fica gerado em <code>reports/cov/index.html</code> com 68% de cobertura total.</p>
+<hr />
+<h2 id="14-analise-de-conformidade-com-isoiec-25010">14. ANÁLISE DE CONFORMIDADE COM ISO/IEC 25010<a class="headerlink" href="#14-analise-de-conformidade-com-isoiec-25010" title="Permanent link">&para;</a></h2>
+<h3 id="141-completude-funcional">14.1 Completude Funcional<a class="headerlink" href="#141-completude-funcional" title="Permanent link">&para;</a></h3>
+<p><strong>Definição:</strong> Grau em que o conjunto de funções cobre todas as tarefas e objetivos do usuário especificados.</p>
+<p><strong>Avaliação:</strong>
+- Todos os casos de uso documentados possuem testes: SIM
+- Todas as entidades principais são testadas: SIM
+- Todas as operações CRUD são testadas: SIM</p>
+<p><strong>Resultado:</strong> <strong>ADEQUADO</strong></p>
+<h3 id="142-corretude-funcional">14.2 Corretude Funcional<a class="headerlink" href="#142-corretude-funcional" title="Permanent link">&para;</a></h3>
+<p><strong>Definição:</strong> Grau em que um produto ou sistema fornece os resultados corretos com o grau de precisão necessário.</p>
+<p><strong>Avaliação:</strong>
+- Taxa de sucesso dos testes: 99,61%
+- Precisão dos cálculos de recomendação: 99,65% (diferença média de 0,05%)
+- Validações de dados: 100% de sucesso</p>
+<p><strong>Resultado:</strong> <strong>EXCELENTE</strong></p>
+<h3 id="143-aptidao-funcional">14.3 Aptidão Funcional<a class="headerlink" href="#143-aptidao-funcional" title="Permanent link">&para;</a></h3>
+<p><strong>Definição:</strong> Grau em que as funções facilitam a realização de tarefas e objetivos especificados.</p>
+<p><strong>Avaliação:</strong>
+- API RESTful bem estruturada: SIM
+- Validações claras de entrada: SIM
+- Mensagens de erro informativas: SIM (baseado nos testes)
+- Controle de permissões adequado: SIM</p>
+<p><strong>Resultado:</strong> <strong>ADEQUADO</strong></p>
+<hr />
+<h2 id="15-conclusoes">15. CONCLUSÕES<a class="headerlink" href="#15-conclusoes" title="Permanent link">&para;</a></h2>
+<h3 id="151-sintese-dos-resultados">15.1 Síntese dos Resultados<a class="headerlink" href="#151-sintese-dos-resultados" title="Permanent link">&para;</a></h3>
+<p>A API mec-energia-api do sistema MEPA demonstra <strong>EXCELENTE adequação funcional</strong>, com os seguintes destaques:</p>
+<ol>
+<li><strong>Taxa de Corretude:</strong> 99,61% (critério: &gt;= 95%) - <strong>CONFORME</strong></li>
+<li><strong>Cobertura de Requisitos:</strong> 100% (critério: &gt;= 80%) - <strong>CONFORME</strong></li>
+<li><strong>Taxa de Falhas em Casos de Borda:</strong> 0% (critério: &lt;= 5%) - <strong>CONFORME</strong></li>
+<li><strong>Cobertura de Código:</strong> 68% (critério informativo)</li>
+</ol>
+<h3 id="152-pontos-fortes">15.2 Pontos Fortes<a class="headerlink" href="#152-pontos-fortes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Algoritmo de Recomendação Altamente Preciso</strong></li>
+<li>96 cenários testados com 100% de aprovação</li>
+<li>Diferença média de apenas 0,05% em relação aos valores esperados</li>
+<li>
+<p>Maior diferença encontrada: 0,65%, bem dentro da tolerância</p>
+</li>
+<li>
+<p><strong>Cobertura Abrangente de Funcionalidades</strong></p>
+</li>
+<li>Todos os casos de uso principais possuem testes</li>
+<li>
+<p>259 testes automatizados cobrindo todas as áreas críticas</p>
+</li>
+<li>
+<p><strong>Robustez em Casos de Borda</strong></p>
+</li>
+<li>0% de falhas em situações atípicas</li>
+<li>
+<p>Validações rigorosas de entrada de dados</p>
+</li>
+<li>
+<p><strong>Qualidade do Código de Teste</strong></p>
+</li>
+<li>Testes bem estruturados e organizados</li>
+<li>Uso de fixtures e mocks apropriados</li>
+<li>Testes parametrizados para múltiplos cenários</li>
+</ol>
+<h3 id="153-areas-de-melhoria">15.3 Áreas de Melhoria<a class="headerlink" href="#153-areas-de-melhoria" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Cobertura de Código</strong></li>
+<li>Alguns módulos com cobertura abaixo de 70%</li>
+<li>
+<p>Recomenda-se aumentar para &gt;= 80% em todos os módulos críticos</p>
+</li>
+<li>
+<p><strong>Testes de Serviços</strong></p>
+</li>
+<li>Alguns arquivos services.py com 0% de cobertura</li>
+<li>
+<p>Necessário adicionar testes para estes componentes</p>
+</li>
+<li>
+<p><strong>Testes End-to-End</strong></p>
+</li>
+<li>Adicionar testes que simulem fluxos completos de usuario</li>
+<li>Testar integracao entre frontend e backend</li>
+</ol>
+<h3 id="154-recomendacoes">15.4 Recomendações<a class="headerlink" href="#154-recomendacoes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Curto Prazo (1-2 meses)</strong></li>
+<li>Adicionar testes para os módulos services.py</li>
+<li>Aumentar cobertura de recommendation/calculator.py para &gt;= 80%</li>
+<li>
+<p>Adicionar testes de integração para fluxos críticos</p>
+</li>
+<li>
+<p><strong>Médio Prazo (3-6 meses)</strong></p>
+</li>
+<li>Implementar testes de performance</li>
+<li>Adicionar testes de segurança (OWASP Top 10)</li>
+<li>
+<p>Aumentar cobertura geral para &gt;= 80%</p>
+</li>
+<li>
+<p><strong>Longo Prazo (6-12 meses)</strong></p>
+</li>
+<li>Implementar testes end-to-end automatizados</li>
+<li>Adicionar testes de carga e estresse</li>
+<li>Implementar continuous integration com gates de qualidade</li>
+</ol>
+<h3 id="155-avaliacao-final">15.5 Avaliação Final<a class="headerlink" href="#155-avaliacao-final" title="Permanent link">&para;</a></h3>
+<p>O sistema MEPA Energia API demonstra <strong>ALTA ADEQUAÇÃO FUNCIONAL</strong> segundo a norma ISO/IEC 25010:</p>
+<ul>
+<li><strong>Completude Funcional:</strong> EXCELENTE</li>
+<li><strong>Corretude Funcional:</strong> EXCELENTE</li>
+<li><strong>Aptidão Funcional:</strong> BOA</li>
+</ul>
+<p><strong>Avaliação Geral: APROVADO COM EXCELÊNCIA</strong></p>
+<p>O sistema atende e supera todos os critérios definidos nas fases 3 e 4 do documento de qualidade, demonstrando que as funcionalidades implementadas são corretas, completas e robustas.</p>
+<hr />
+<h2 id="16-assinaturas">16. ASSINATURAS<a class="headerlink" href="#16-assinaturas" title="Permanent link">&para;</a></h2>
+<p><strong>Relatório Elaborado por:</strong> Davi e Mateus<br />
+<strong>Data:</strong> 26 de novembro de 2025<br />
+<strong>Projeto:</strong> MEPA Energia - Kay-McNulty Team<br />
+<strong>Disciplina:</strong> Qualidade de Software</p>
+<hr />
+<h2 id="17-referencias">17. REFERÊNCIAS<a class="headerlink" href="#17-referencias" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>ISO/IEC 25010:2011 - Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - System and software quality models</p>
+</li>
+<li>
+<p>ISO/IEC 25023:2016 - Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - Measurement of system and software product quality</p>
+</li>
+<li>
+<p>ISO/IEC 15939:2017 - Systems and software engineering - Measurement process</p>
+</li>
+<li>
+<p>IEEE Std 1061-1998 - IEEE Standard for a Software Quality Metrics Methodology</p>
+</li>
+<li>
+<p>Documentação do Projeto MEPA Energia</p>
+</li>
+<li>
+<p>Disponível em: https://gitlab.com/lappis-unb/projetos-energia/mec-energia/documentacao</p>
+</li>
+<li>
+<p>2025-2_T01_KAY-McNULTY - Fase 3: Planejamento da Avaliação</p>
+</li>
+<li>
+<p>2025-2_T01_KAY-McNULTY - Fase 4: Execução e Análise dos Resultados</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "content.code.copy", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+      
+        <script src="../../../js/lightbox-init.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

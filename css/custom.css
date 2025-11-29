@@ -1,0 +1,47 @@
+/* Custom CSS for Kay McNulty - MEPA Documentation */
+
+/* Improve table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+table th {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    font-weight: bold;
+    padding: 0.6em;
+}
+
+table td {
+    padding: 0.6em;
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Improve image captions and galleries */
+figure {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    color: var(--md-default-fg-color--light);
+    margin-top: 0.5em;
+}
+
+/* Custom admonition styles */
+.admonition {
+    margin: 1.5em 0;
+}
+
+/* Code blocks improvements */
+pre code {
+    font-size: 0.9em;
+}
+
+/* Improve version history table */
+table tr:hover {
+    background-color: var(--md-default-fg-color--lightest);
+}

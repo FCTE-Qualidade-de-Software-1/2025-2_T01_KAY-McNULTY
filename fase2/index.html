@@ -1,0 +1,1588 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação da Análise de Qualidade sobre o MEPA">
+      
+      
+      
+      
+        <link rel="prev" href="../fase1/">
+      
+      
+        <link rel="next" href="../fase3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Fase 2 - Kay McNulty - MEPA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-2-planejamento-de-medicao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Kay McNulty - MEPA" class="md-header__button md-logo" aria-label="Kay McNulty - MEPA" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kay McNulty - MEPA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_KAY-McNULTY" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kay McNulty - MEPA" class="md-nav__button md-logo" aria-label="Kay McNulty - MEPA" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Kay McNulty - MEPA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_KAY-McNULTY" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geral
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geral
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gqm-eficiencia-de-desempenho-foco-em-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GQM — Eficiência de Desempenho (foco em Throughput)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GQM — Eficiência de Desempenho (foco em Throughput)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal-g-pe-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal (G-PE-01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-candidatas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas candidatas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-medir-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que medir throughput
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-interpretacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critérios &amp; interpretação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critérios &amp; interpretação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referencias-e-leitura-por-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências e leitura por métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gqm-adequacao-funcional-foco-em-corretude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GQM — Adequação Funcional (foco em Corretude)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GQM — Adequação Funcional (foco em Corretude)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal-g-af-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal (G-AF-01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-candidatas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas candidatas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-medir-corretude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que medir Corretude
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-interpretacao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critérios &amp; interpretação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critérios &amp; interpretação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referencias-e-leitura-por-metrica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências e leitura por métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gqm-manutenibilidade-foco-em-modificabilidade-e-analisabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal-g-mt-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal (G-MT-01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-candidatas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas candidatas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-medir-manutenibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que medir Manutenibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-interpretacao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critérios &amp; Interpretação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Critérios &amp; Interpretação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leitura-integrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leitura Integrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-onde-vem-os-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De onde vêm os “valores”?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias-e-leitura-por-metrica_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências e leitura por métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliografia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_2" id="__nav_1_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adequação Funcional
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Adequação Funcional
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/adequacao-funcional/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/adequacao-funcional/casos-de-teste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manutenibilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/eficiencia-e-desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência e Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fase-2-planejamento-de-medicao">Fase 2 — Planejamento de Medição<a class="headerlink" href="#fase-2-planejamento-de-medicao" title="Permanent link">&para;</a></h1>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
+<p>Com base no que foi priorizado na Fase 1 — <strong>adequação funcional</strong>, <strong>eficiência de desempenho</strong> e <strong>manutenibilidade</strong> — esta fase se limita a <strong>planejar a medição</strong>: definir o que será medido, por que será medido e como interpretar os resultados de forma rastreável. O produto aqui é um conjunto de <strong>metas, perguntas e métricas candidatas</strong>, acompanhado de <strong>critérios de leitura</strong> por qualidade. Este planejamento servirá de <strong>base direta para a Fase 3</strong>, quando serão definidos os meios de execução (ambientes, ferramentas e procedimentos).</p>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Transformar as prioridades da Fase 1 em um <strong>plano detalhado de medição</strong>, estabelecendo:
+1) <strong>metas de medição</strong> alinhadas às três características;<br />
+2) <strong>perguntas de avaliação</strong> que conectam metas e dados;<br />
+3) <strong>métricas operacionais</strong> com definição, fórmula, unidade e fonte (conforme elementos de medida) (ISO/IEC 25021, 2012) [5];<br />
+4) <strong>critérios e limiares interpretativos</strong> oriundos de normas e convenções, a serem <strong>calibrados após o primeiro baseline</strong> (IEEE 1061, 1998; ISO/IEC 15939, 2017) [6][2];<br />
+5) <strong>rastreabilidade ponta a ponta</strong> (Goal → Question → Metric → Evidência → Decisão).</p>
+<h2 id="metodologia">Metodologia<a class="headerlink" href="#metodologia" title="Permanent link">&para;</a></h2>
+<p>Para esta fase, iremos <strong>empregar o GQM (Goal–Question–Metric)</strong> como estrutura de raciocínio: primeiro explicitamos a <strong>meta</strong> de avaliação, depois derivamos as <strong>perguntas</strong> que precisam ser respondidas e, por fim, indicamos as <strong>métricas</strong> que objetivamente respondem a essas perguntas — de modo que <strong>cada medida esteja ancorada em um objetivo explícito e em um contexto de decisão</strong> (Basili; Rombach, 1988) [1]. O processo de medição que envolve planejar, coletar, analisar e comunicar os resultados segue as atividades definidas na <strong>ISO/IEC 15939</strong> (ISO/IEC 15939, 2017) [2]. As <strong>características de qualidade</strong> de referência são as do <strong>ISO/IEC 25010</strong> (ISO/IEC 25010, 2011) [3], e a <strong>seleção/descrição das métricas</strong> é feita com base no catálogo do <strong>ISO/IEC 25023</strong> e nos <strong>elementos de medida do ISO/IEC 25021</strong> (ISO/IEC 25023, 2016; ISO/IEC 25021, 2012) [4][5]. Para interpretar <strong>desempenho</strong>, adotaremos as convenções dos <strong>golden signals</strong> (latência, vazão/tráfego, erros, saturação) (Beyer et al., 2016) [7]. A <strong>governança de metas e limiares</strong> seguirá o princípio de que <strong>valores são orientados a objetivo e contexto e devem ser revisados após o baseline</strong>, conforme a <strong>IEEE 1061</strong> (IEEE 1061, 1998) [6] e as orientações de melhoria contínua no <strong>SWEBOK</strong> (IEEE Computer Society, 2025) [9].</p>
+<p><strong>Como o Goal será escrito (formato padronizado GQM):</strong>
+- <strong>Analisar</strong>: <em>[entidade]</em> (função/módulo/processo/sistema); <strong>com o propósito de</strong>: <em>entender/ controlar/ melhorar</em>; <strong>com respeito a</strong>: <em>[característica de qualidade]</em>; <strong>do ponto de vista de</strong>: <em>[stakeholder]</em>; <strong>no contexto de</strong>: <em>[ambiente/limites]</em>.<br />
+<em>Exemplo:</em> Analisar as recomendações do MEPA para <strong>controlar</strong> corretude/completude, do ponto de vista do <strong>gestor</strong>, no contexto de <strong>dados anonimizados e ambiente de referência</strong>.</p>
+<p><strong>Derivação de Questions:</strong> para cada Goal, formulamos perguntas que, se respondidas, permitem declarar sucesso, evitando métricas supérfluas (p.ex., “as recomendações coincidem com um <strong>oracle</strong> regulatório?”, “qual o p95 sob carga representativa?”, “qual o esforço para incorporar nova regra?”).</p>
+<p><strong>Especificação de Metrics:</strong> cada pergunta recebe métricas com <strong>definição operacional</strong> (nome, fórmula, unidade, fonte, método de coleta, frequência), sem executar nada nesta fase; a calibração numérica fica para o baseline da Fase 3 (ISO/IEC 25021, 2012; ISO/IEC 25023, 2016) [5][4].</p>
+<p><strong>Critérios por qualidade:</strong> para <strong>adequação funcional</strong>, descrevemos o que significa estar <strong>acima/abaixo do esperado</strong> em termos de corretude/precisão e completude; para <strong>desempenho</strong>, como ler latência, vazão e saturação em conjunto; para <strong>manutenibilidade</strong>, como interpretar índice de manutenibilidade, complexidade, cobertura e duplicação/“smells”. Os <strong>números concretos</strong> serão definidos <strong>após</strong> a primeira rodada de medições (baseline) (IEEE 1061, 1998; ISO/IEC 15939, 2017) [6][2].</p>
+<p><strong>Rastreabilidade mínima:</strong> toda métrica receberá <strong>GoalID, QuestionID e MetricID</strong> e estará vinculada aos requisitos priorizados na Fase 1; metadados (versão, dataset, ambiente, configuração) serão especificados para aplicação na Fase 3.</p>
+<hr />
+<h2 id="gqm-eficiencia-de-desempenho-foco-em-throughput">GQM — Eficiência de Desempenho (foco em <em>Throughput</em>)<a class="headerlink" href="#gqm-eficiencia-de-desempenho-foco-em-throughput" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Relação com a Fase 1:</strong> a Fase 1 definiu <strong>Eficiência de Desempenho</strong> como prioridade alta e destacou a necessidade de <strong>processar grandes volumes rapidamente</strong> para não atrasar decisões administrativas. O <em>throughput</em> materializa “<strong>quanto processamos no tempo disponível</strong>”.<br />
+<em>(<a href="https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#eficiencia-de-desempenho-performance-efficiency">Fase 1 — Eficiência de Desempenho (Performance Efficiency)</a>).</em></p>
+</blockquote>
+<h3 id="goal-g-pe-01">Goal (G-PE-01)<a class="headerlink" href="#goal-g-pe-01" title="Permanent link">&para;</a></h3>
+<p>Analisar o fluxo <strong>analisar→recomendar</strong> do MEPA, com o propósito de <strong>entender e controlar</strong> a <strong>eficiência de desempenho</strong>, do ponto de vista da <strong>equipe de engenharia e operações</strong>, no contexto de <strong>cargas representativas e ambiente de referência</strong>.</p>
+<h3 id="questions">Questions<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Pergunta de Avaliação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Q-PE-01</strong></td>
+<td style="text-align: left;">Qual é o <strong>throughput sustentável</strong> do fluxo principal em cargas representativas?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q-PE-02</strong></td>
+<td style="text-align: left;">Como <strong>latência</strong> e <strong>saturação de recursos</strong> se comportam quando o throughput cresce?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q-PE-03</strong></td>
+<td style="text-align: left;">O sistema mantém <strong>estabilidade</strong> ao longo do tempo e com variações de carga?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metricas-candidatas">Métricas candidatas<a class="headerlink" href="#metricas-candidatas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Definição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M-PE-01</strong></td>
+<td style="text-align: left;"><strong>Throughput</strong> (faturas/tempo)</td>
+<td style="text-align: left;">Capacidade efetiva entregue (vazão).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-PE-02</strong></td>
+<td style="text-align: left;"><strong>Latência</strong> (p50/p95/p99) E2E</td>
+<td style="text-align: left;">Experiência típica e de cauda do tempo de resposta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-PE-03</strong></td>
+<td style="text-align: left;"><strong>Saturação</strong> (CPU/RAM) sob carga</td>
+<td style="text-align: left;">Margem operacional e utilização de recursos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-PE-04</strong></td>
+<td style="text-align: left;"><strong>Eficiência de escalabilidade</strong></td>
+<td style="text-align: left;">Ganho de <em>throughput</em> por incremento de recurso (proporcionalidade).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-que-medir-throughput">Por que medir <em>throughput</em><a class="headerlink" href="#por-que-medir-throughput" title="Permanent link">&para;</a></h3>
+<p>O <em>throughput</em> indica a <strong>capacidade efetiva</strong> do MEPA: verifica se os <strong>lotes cabem na janela operacional</strong> (requisito da Fase 1), orienta <strong>SLOs</strong> e mostra <strong>onde otimizar</strong> (gargalo estrutural vs. escala saudável). É um dos <strong>golden signals</strong> usados para guiar <strong>capacidade, confiabilidade e custo</strong> (Beyer et al., 2016) [7].</p>
+<h3 id="criterios-interpretacao">Critérios &amp; interpretação<a class="headerlink" href="#criterios-interpretacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Leitura integrada:</strong> <em>throughput</em> “acima do esperado” é o que <strong>fecha os lotes no tempo planejado</strong> <strong>sem</strong> aumento anormal de <strong>latência</strong> ou <strong>saturação</strong>. Se a taxa cai ou a latência explode, priorizamos <em>profiling</em> e correções de gargalo.  </li>
+<li><strong>De onde vêm os “valores”?</strong>  </li>
+<li><strong>Normas</strong> (ISO/IEC 25023) definem <em>o que medir</em> (taxa de processamento, tempos de resposta, utilização), mas <strong>não impõem números universais</strong>; os limiares devem refletir <strong>contexto e objetivo</strong>.  </li>
+<li><strong>SRE</strong> recomenda manter <strong>folga de capacidade</strong> e usar <strong>quantis</strong> de latência para garantir consistência (Beyer et al., 2016) [7].  </li>
+<li><strong>Fase 1</strong> fornece o <strong>requisito de negócio</strong> que vira alvo: <em>“processar lote X no intervalo Y sem atrasar decisões”</em>. Esse requisito é o <strong>ponto de partida</strong> para o <strong>valor-alvo de throughput</strong>.  </li>
+<li><strong>Quando definimos números concretos:</strong> na <strong>Fase 3</strong>, após o <strong>baseline</strong>, fixamos metas <strong>quantitativas</strong> (taxa mínima por tempo, teto de quantil de latência, headroom de CPU/RAM), conforme <strong>ISO/IEC 15939</strong> e <strong>IEEE 1061</strong> [2][6].</li>
+</ul>
+<h4 id="referencias-e-leitura-por-metrica">Referências e leitura por métrica<a class="headerlink" href="#referencias-e-leitura-por-metrica" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Referência(s)</th>
+<th style="text-align: left;">Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M-PE-01</strong> — Throughput</td>
+<td style="text-align: left;">ISO/IEC 25023 [4] + Golden Signals [7]</td>
+<td style="text-align: left;"><strong>Acima</strong> = cumpre a demanda da Fase 1. <strong>Abaixo</strong> = sinal de gargalo ou capacidade subdimensionada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-PE-02</strong> — Latência (quantis) E2E</td>
+<td style="text-align: left;">ISO/IEC 25023 [4] + uso de quantis SRE [7]</td>
+<td style="text-align: left;"><strong>Acima</strong> = experiência consistente; <strong>Atenção</strong> = cauda alongada/instabilidade; <strong>Abaixo (piorando)</strong> = risco de estourar a janela mesmo com bom throughput.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-PE-03</strong> — Saturação (CPU/RAM)</td>
+<td style="text-align: left;">Golden Signals [7] + 25023 [4]</td>
+<td style="text-align: left;"><strong>Acima</strong> = operação com folga; <strong>Atenção</strong> = aproximação de saturação que afeta latência; <strong>Abaixo (excesso de folga)</strong> = possível ineficiência/overprovisioning (avaliar com throughput).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-PE-04</strong> — Eficiência de escalabilidade</td>
+<td style="text-align: left;">ISO/IEC 25023 (escalabilidade) [4]</td>
+<td style="text-align: left;"><strong>Acima</strong> = ganho proporcional (ou próximo) com mais recurso; <strong>Atenção</strong> = ganho marginal decrescente precoce; <strong>Abaixo</strong> = contenção/lock/arquitetura limitando escala.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gqm-adequacao-funcional-foco-em-corretude">GQM — Adequação Funcional (foco em <em>Corretude</em>)<a class="headerlink" href="#gqm-adequacao-funcional-foco-em-corretude" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Relação com a Fase 1:</strong> A Fase 1 estabeleceu a <strong>Adequação Funcional</strong> como a principal prioridade, pois a função central do MEPA é gerar recomendações que levem à economia de recursos. Uma recomendação incorreta não apenas anula o propósito do software, como pode causar prejuízos financeiros, tornando a <strong>corretude</strong> dos cálculos e das lógicas de negócio um requisito não-negociável.
+<em>(<a href="https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#adequacao-funcional-functional-suitability">Fase 1 — Adequação Funcional (Functional Suitability)</a>)</em></p>
+</blockquote>
+<h3 id="goal-g-af-01">Goal (G-AF-01)<a class="headerlink" href="#goal-g-af-01" title="Permanent link">&para;</a></h3>
+<p>Analisar o <strong>módulo de geração de recomendações</strong> do MEPA, com o propósito de <strong>controlar e validar</strong> a sua <strong>adequação funcional</strong>, do ponto de vista do <strong>gestor de energia (usuário final)</strong>, no contexto de um <strong>conjunto de dados de teste com resultados conhecidos (oracle)</strong>.</p>
+<h3 id="questions_1">Questions<a class="headerlink" href="#questions_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Pergunta de Avaliação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Q-AF-01</strong></td>
+<td style="text-align: left;">As recomendações geradas pelo sistema são <strong>corretas</strong> quando comparadas a um gabarito validado?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q-AF-02</strong></td>
+<td style="text-align: left;">O sistema cobre todos os <strong>cenários e regras contratuais</strong> especificados como requisitos?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q-AF-03</strong></td>
+<td style="text-align: left;">Qual a <strong>robustez</strong> do sistema ao processar dados de entrada válidos, mas complexos ou atípicos (casos de borda)?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metricas-candidatas_1">Métricas candidatas<a class="headerlink" href="#metricas-candidatas_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Definição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M-AF-01</strong></td>
+<td style="text-align: left;"><strong>Taxa de Corretude (Accuracy)</strong></td>
+<td style="text-align: left;">Percentual de recomendações corretas em um <em>dataset</em> de validação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-AF-02</strong></td>
+<td style="text-align: left;"><strong>Cobertura de Requisitos Funcionais por Testes</strong></td>
+<td style="text-align: left;">Percentual de requisitos funcionais que possuem casos de teste automatizados para verificá-los.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-AF-03</strong></td>
+<td style="text-align: left;"><strong>Taxa de Falhas em Casos de Borda</strong></td>
+<td style="text-align: left;">Percentual de falhas (erros, exceções) ao processar um conjunto de dados com casos de borda conhecidos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-que-medir-corretude">Por que medir <em>Corretude</em><a class="headerlink" href="#por-que-medir-corretude" title="Permanent link">&para;</a></h3>
+<p>A <em>corretude</em> é a materialização da principal proposta de valor do MEPA. Medir essa característica de forma objetiva, comparando a saída do software com um "oracle" (um conjunto de resultados esperados, calculados manualmente ou por um sistema de referência), é a única forma de garantir que o software cumpre sua função primária e gera confiança para o usuário final.</p>
+<h3 id="criterios-interpretacao_1">Critérios &amp; interpretação<a class="headerlink" href="#criterios-interpretacao_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Leitura integrada:</strong> Uma alta taxa de corretude (M-AF-01) só é confiável se a cobertura de requisitos (M-AF-02) também for alta. Uma baixa taxa de falhas em casos de borda (M-AF-03) indica que o sistema é robusto e não apenas funciona para os "casos felizes".</li>
+<li><strong>De onde vêm os “valores”?</strong><ul>
+<li><strong>O "oracle":</strong> A definição de "correto" virá de um conjunto de cenários (faturas, contratos, regras) cujo resultado ótimo é pré-calculado e validado por especialistas no domínio de energia elétrica. Este é o principal artefato para a medição.</li>
+<li><strong>Requisitos:</strong> Os requisitos funcionais definidos na Fase 1 e na documentação do projeto determinam o escopo do que deve ser testado (completude).</li>
+</ul>
+</li>
+<li><strong>Quando definimos números concretos:</strong> Na <strong>Fase 3</strong>, o <em>baseline</em> será estabelecido ao executar os testes contra o oracle. A meta ideal para a corretude é 100%, e qualquer desvio exigirá uma análise de causa raiz.</li>
+</ul>
+<h4 id="referencias-e-leitura-por-metrica_1">Referências e leitura por métrica<a class="headerlink" href="#referencias-e-leitura-por-metrica_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Referência ISO</th>
+<th style="text-align: left;">Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M-AF-01</strong> — Taxa de Corretude</td>
+<td style="text-align: left;">ISO/IEC 25023 (Corretude Funcional) [4]</td>
+<td style="text-align: left;"><strong>Acima</strong> (próximo de 100%) = o sistema é confiável. <strong>Abaixo</strong> = existem falhas na lógica de negócio que precisam ser corrigidas com urgência. A análise dos casos incorretos é mais importante que o número em si..</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-AF-02</strong> — Cobertura de Requisitos</td>
+<td style="text-align: left;">ISO/IEC 25023 (Completude Funcional) [4]</td>
+<td style="text-align: left;"><strong>Acima</strong> = alta confiança de que funcionalidades implementadas foram verificadas. <strong>Abaixo</strong> = risco de comportamento inesperado em partes sem validação explícita.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-AF-03</strong> — Taxa de Falhas em Casos de Borda</td>
+<td style="text-align: left;">ISO/IEC 25023 (Robustez) [4]</td>
+<td style="text-align: left;"><strong>Acima</strong> (próximo de 0%) = o sistema lida bem com a complexidade real. <strong>Abaixo</strong> (taxa de falhas &gt; 0%) = fragilidades que podem levar a paradas inesperadas em produção.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gqm-manutenibilidade-foco-em-modificabilidade-e-analisabilidade">GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)<a class="headerlink" href="#gqm-manutenibilidade-foco-em-modificabilidade-e-analisabilidade" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Relação com a Fase 1:</strong> A Fase 1 definiu Manutenibilidade como prioridade média, destacando a necessidade de o sistema ser <strong>facilmente modificável</strong> devido à constante mudança regulatória no domínio de energia e <strong>analisável/compreensível</strong> para atrair e reter contribuições da comunidade de software livre.
+<em>(<a href="https://fcte-qualidade-de-software-1.github.io/2025-2_T01_KAY-McNULTY/fase1/#Manutenibilidade-(Maintainability)">Fase 1 — Adequação Funcional (Functional Suitability)</a>)</em></p>
+</blockquote>
+<h3 id="goal-g-mt-01">Goal (G-MT-01)<a class="headerlink" href="#goal-g-mt-01" title="Permanent link">&para;</a></h3>
+<p>Analisar o <strong>código-fonte e a arquitetura</strong> do MEPA, com o propósito de <strong>entender e melhorar</strong> a <strong>manutenibilidade</strong> (especialmente modificabilidade e analisabilidade), do ponto de vista da <strong>equipe de desenvolvimento e da comunidade de software livre</strong>, no contexto de <strong>incorporação de novas regras de negócio e correção de falhas</strong>.</p>
+<h3 id="questions_2">Questions<a class="headerlink" href="#questions_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Pergunta de Avaliação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Q-MT-01</strong></td>
+<td style="text-align: left;">Qual o esforço técnico estimado para incorporar uma nova regra de negócio ou modificar uma existente (e.g., uma nova tarifa ou imposto)?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q-MT-02</strong></td>
+<td style="text-align: left;">O design do código está alinhado a padrões que minimizam a complexidade e facilitam a compreensão por novos desenvolvedores?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q-MT-03</strong></td>
+<td style="text-align: left;">Qual a qualidade e o grau de cobertura dos testes de unidade/integração para garantir que modificações não introduzam novos defeitos (regressão)?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metricas-candidatas_2">Métricas candidatas<a class="headerlink" href="#metricas-candidatas_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Definição Operacional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M-MT-01</strong></td>
+<td style="text-align: left;"><strong>Índice de Manutenibilidade (Maintainability Index - MI)</strong></td>
+<td style="text-align: left;">Métrica composta que reflete o quão fácil o código é de manter (função de Complexidade Ciclomática, Lines of Code e Halstead Volume).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-MT-02</strong></td>
+<td style="text-align: left;"><strong>Complexidade Ciclomática Média (Average Cyclomatic Complexity - C.C.)</strong></td>
+<td style="text-align: left;">Número médio de caminhos independentes por função ou módulo, indicando a complexidade lógica do código.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-MT-03</strong></td>
+<td style="text-align: left;"><strong>Cobertura de Teste de Código (Test Code Coverage - TCC)</strong></td>
+<td style="text-align: left;">Percentual de linhas/branches/funções do código-fonte que são exercidas por testes automatizados.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-MT-04</strong></td>
+<td style="text-align: left;"><strong>Taxa de Dívida Técnica (Technical Debt Ratio - TDR)</strong></td>
+<td style="text-align: left;">Razão entre o custo de correção dos <em>code smells</em> (dívida) e o custo de desenvolvimento do sistema.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-que-medir-manutenibilidade">Por que medir Manutenibilidade<a class="headerlink" href="#por-que-medir-manutenibilidade" title="Permanent link">&para;</a></h3>
+<p>A manutenibilidade é crucial para a <strong>sustentabilidade</strong> do MEPA. Medir métricas de código (como MI e C.C.) e de testes (TCC) fornece dados objetivos para:</p>
+<ul>
+<li>Reduzir o risco de obsolescência regulatória (facilitando a modificação das regras).</li>
+<li>Diminuir o custo de evolução e correção de falhas.</li>
+<li>Apoiar a colaboração, indicando onde o código é mais difícil de entender/modificar.</li>
+</ul>
+<blockquote>
+<p>A ISO/IEC 25010 define a manutenibilidade pelas subcaracterísticas de <strong>Modificabilidade</strong> (M-MT-01, M-MT-04) e <strong>Analisabilidade</strong> (M-MT-02).</p>
+</blockquote>
+<h3 id="criterios-interpretacao_2">Critérios &amp; Interpretação<a class="headerlink" href="#criterios-interpretacao_2" title="Permanent link">&para;</a></h3>
+<h4 id="leitura-integrada">Leitura Integrada<a class="headerlink" href="#leitura-integrada" title="Permanent link">&para;</a></h4>
+<p>Um <strong>alto</strong> Índice de Manutenibilidade (<strong>M-MT-01</strong>) e uma <strong>baixa</strong> Complexidade Ciclomática Média (<strong>M-MT-02</strong>) indicam que o código é fácil de entender. Isso só é sustentável se for acompanhado por uma <strong>alta Cobertura de Teste (M-MT-03)</strong>, que protege contra a regressão de defeitos ao realizar as modificações inevitáveis. A Dívida Técnica (<strong>M-MT-04</strong>) deve ser monitorada para evitar a deterioração da qualidade ao longo do tempo.</p>
+<h4 id="de-onde-vem-os-valores">De onde vêm os “valores”?<a class="headerlink" href="#de-onde-vem-os-valores" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Convenções:</strong> O <strong>Índice de Manutenibilidade</strong> tem limiares estabelecidos pela literatura (<em>e.g.</em>, MI abaixo de 65 é frequentemente considerado de alto risco). A <strong>Complexidade Ciclomática</strong> ideal para uma função individual deve ser baixa, tipicamente abaixo de 10. A <strong>Cobertura de Teste</strong> é um percentual, onde 80% ou mais é geralmente considerado um bom patamar de proteção para sistemas críticos.</li>
+<li><strong>Contexto:</strong> O valor alvo da Cobertura de Teste deve ser <strong>maior</strong> nos módulos de regras de negócio (cálculo de tarifa, recomendação), que são a essência crítica do MEPA.</li>
+<li><strong>ISO/IEC 25023</strong> define o que medir (complexidade, testabilidade, modularidade), mas os <strong>limiares</strong> devem ser ajustados ao contexto do projeto.  </li>
+<li>
+<p><strong>IEEE 1061</strong> recomenda <em>baseline empírico, seguido de </em><em>revisão periódica</em>* conforme evolução da base de código.</p>
+</li>
+<li>
+<p><strong>Definição Concreta:</strong> Na Fase 3, após o baseline (primeira medição), fixamos limiares numéricos para cada métrica, conforme ISO/IEC 15939 e IEEE 1061. <em>Exemplo: Complexidade Ciclomática ≤ 10 (aceitável), &gt; 15 (requer revisão).  Cobertura de Testes ≥ 80%. MI ≥ 80 (bom), 50–79 (aceitável), &lt; 50 (ruim).</em></p>
+</li>
+</ol>
+<h3 id="referencias-e-leitura-por-metrica_2">Referências e leitura por métrica<a class="headerlink" href="#referencias-e-leitura-por-metrica_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Referência ISO</th>
+<th style="text-align: left;">Interpretação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>M-MT-01</strong> — Índice de Manutenibilidade</td>
+<td style="text-align: left;">ISO/IEC 25023 (Analisabilidade/Modificabilidade)[4]</td>
+<td style="text-align: left;"><strong>Acima</strong> (Alto MI) = Fácil de modificar/entender. <strong>Abaixo</strong> (Baixo MI) = Alto risco de modificação; indica "código legado".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-MT-02</strong> — Complexidade Ciclomática Média</td>
+<td style="text-align: left;">ISO/IEC 25023 (Analisabilidade)[4]</td>
+<td style="text-align: left;"><strong>Baixa</strong> (Ideal) = Código simples, fácil de testar. <strong>Alta</strong> (Atenção) = Funções muito grandes/complexas; propensas a falhas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-MT-03</strong> — Cobertura de Teste de Código</td>
+<td style="text-align: left;">ISO/IEC 25023 (Testabilidade)[4]</td>
+<td style="text-align: left;"><strong>Alta</strong> (Ideal) = Modificações seguras; alta proteção contra regressões. <strong>Baixa</strong> = Risco de quebrar funcionalidades existentes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M-MT-04</strong> — Taxa de Dívida Técnica</td>
+<td style="text-align: left;">ISO/IEC 25023 (Modificabilidade)[4]</td>
+<td style="text-align: left;"><strong>Baixa</strong> (Ideal) = Custo de manutenção baixo. <strong>Alta</strong> = Alto esforço e tempo gastos na manutenção.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referencias-bibliograficas">Referências Bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a id="ref1"></a><strong>Basili, V. R.; Rombach, H. D.</strong> The TAME Project: Towards Improvement-Oriented Software Environments. <em>IEEE Transactions on Software Engineering</em>, 14(6), 1988.  </li>
+<li><a id="ref2"></a><strong>ISO/IEC 15939</strong> — <em>Systems and Software Engineering — Measurement Process</em> (2017).  </li>
+<li><a id="ref3"></a><strong>ISO/IEC 25010</strong> — <em>Systems and Software Quality Models</em> (2011). Disponível em: <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010">https://iso25000.com/index.php/en/iso-25000-standards/iso-25010</a>.  </li>
+<li><a id="ref4"></a><strong>ISO/IEC 25023</strong> — <em>Measurement of System and Software Product Quality</em> (2016). Disponível em: <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25023">https://iso25000.com/index.php/en/iso-25000-standards/iso-25023</a>.  </li>
+<li><a id="ref5"></a><strong>ISO/IEC 25021</strong> — <em>Quality Measure Elements</em> (2012). Disponível em: <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25021">https://iso25000.com/index.php/en/iso-25000-standards/iso-25021</a>.  </li>
+<li><a id="ref6"></a><strong>IEEE Std 1061-1998</strong> — <em>IEEE Standard for a Software Quality Metrics Methodology</em> (1998).  </li>
+<li><a id="ref7"></a><strong>Beyer, B.; Jones, C.; Petoff, J.; Murphy, N.</strong> <em>Site Reliability Engineering</em> (O’Reilly, 2016). “Golden signals”. Disponível em: <a href="https://sre.google/sre-book/">https://sre.google/sre-book/</a>.  </li>
+<li><a id="ref8"></a><strong>IEEE Computer Society.</strong> <em>SWEBOK Guide V4.0a</em> (2025). Disponível em: <a href="https://computer.org/swebok">https://computer.org/swebok</a>.</li>
+</ol>
+<hr />
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>MEPA – Monitoramento de Energia em Plataforma Aberta.</strong> Disponível em: <a href="https://gitlab.com/lappis-unb/projects/SMI/mepa">https://gitlab.com/lappis-unb/projects/SMI/mepa</a>.</li>
+</ul>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+<th style="text-align: center;"><strong>Revisor</strong></th>
+<th style="text-align: center;"><strong>Data da Revisão</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+<td style="text-align: center;"><strong><code>1.0</code></strong></td>
+<td style="text-align: left;"><strong>Fase 2 — versão inicial (<em>Introdução, Objetivo e Metodologia</em>)</strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/arthrok"><code>@arthrok</code> — Arthur Alves Melo</a></strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/fabinsz"><code>@Fabio</code></a></strong></td>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+<td style="text-align: center;"><strong><code>1.1</code></strong></td>
+<td style="text-align: left;"><strong>Inclusão do GQM — Eficiência de Desempenho (throughput) e critérios</strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/arthrok"><code>@arthrok</code> — Arthur Alves Melo</a></strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/davi-aguiar-vieira"><code>@Davia Aguiar</code></a></strong></td>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+<td style="text-align: center;"><strong><code>1.2</code></strong></td>
+<td style="text-align: left;"><strong>Inclusão do GQM — Adequação Funcional (foco em <em>Corretude</em>)</strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/devwallyson"><code>@devwallyson</code>—  Wallyson Souza</a></strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/davi-aguiar-vieira"><code>@Davia Aguiar</code></a></strong></td>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+<td style="text-align: center;"><strong><code>1.3</code></strong></td>
+<td style="text-align: left;"><strong>Inclusão do GQM — Manutenibilidade (foco em Modificabilidade e Analisabilidade)</strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/fabinsz"><code>@fabinsz</code> - Fábio</a></strong>, <strong><a href="https://github.com/Felipej3ds"><code>@Felipej3ds</code> - Felipe</a></strong></td>
+<td style="text-align: center;"><strong><a href="https://github.com/Felipej3ds"><code>@Felipej3ds</code></a></strong></td>
+<td style="text-align: center;"><strong>12/10/2025</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+      
+        <script src="../js/lightbox-init.js"></script>
+      
+        <script src="../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

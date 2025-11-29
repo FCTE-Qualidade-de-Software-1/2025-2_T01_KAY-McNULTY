@@ -1,0 +1,1219 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação da Análise de Qualidade sobre o MEPA">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../fase2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Fase 1 - Kay McNulty - MEPA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fase-1" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Kay McNulty - MEPA" class="md-header__button md-logo" aria-label="Kay McNulty - MEPA" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kay McNulty - MEPA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fase 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_KAY-McNULTY" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kay McNulty - MEPA" class="md-nav__button md-logo" aria-label="Kay McNulty - MEPA" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Kay McNulty - MEPA
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_KAY-McNULTY" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geral
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geral
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados Esperados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultados Esperados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitante-e-partes-interessadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitante e partes interessadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descricao-estruturada-do-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição estruturada do software
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-do-tipo-de-produto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação do tipo de produto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposito-da-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propósito da avaliação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo de qualidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptacao-e-priorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptação e priorização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptação e priorização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adequacao-funcional-functional-suitability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adequação Funcional (Functional Suitability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eficiencia-de-desempenho-performance-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eficiência de Desempenho (Performance Efficiency)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manutenibilidade-maintainability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manutenibilidade (Maintainability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escopo-e-profundidade-da-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo e profundidade da avaliação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ods-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ODS relacionados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliografia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_2" id="__nav_1_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adequação Funcional
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Adequação Funcional
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/adequacao-funcional/relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/adequacao-funcional/casos-de-teste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manutenibilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fase4/eficiencia-e-desempenho/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência e Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fase-1">FASE 1<a class="headerlink" href="#fase-1" title="Permanent link">&para;</a></h1>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
+<p>Avaliar a qualidade de um software é um passo fundamental para garantir sua confiabilidade e aplicabilidade prática. O <strong>MEPA</strong> é um sistema de software livre, de código aberto, cuja função principal é auxiliar instituições públicas, especialmente as Instituições Federais de Ensino Superior (IFES), na <strong>otimização de contratos de energia elétrica</strong>.
+Ao processar faturas e dados regulatórios, o MEPA recomenda modalidades contratuais mais vantajosas, promovendo <strong>eficiência energética</strong> e <strong>redução de custos</strong>.</p>
+<p>Por estar inserido em um contexto crítico — o da gestão pública de energia —, o MEPA deve atender a padrões elevados de <strong>adequação funcional</strong>, garantindo resultados confiáveis; de <strong>eficiência</strong>, para processar grandes volumes de dados rapidamente; e de <strong>manutenibilidade</strong>, considerando sua natureza de software livre que demanda constante evolução colaborativa.
+Segundo o <em>SWEBOK Guide V4.0a</em>, a avaliação da qualidade deve refletir o propósito real do software e considerar os requisitos funcionais e não funcionais mais relevantes para os stakeholders <a href="https://computer.org/swebok">(IEEE Computer Society, 2025, p. 1-4)</a>.</p>
+<hr />
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>O objetivo da Fase 1 é <strong>definir os requisitos de avaliação da qualidade</strong> do software selecionado pela equipe, o <strong>MEPA – Monitoramento de Energia em Plataforma Aberta</strong>, desenvolvido pela Universidade de Brasília (UnB).
+Essa etapa inicial estabelece a base para todo o processo de avaliação, descrevendo o <strong>propósito da avaliação</strong>, a <strong>classificação do tipo de produto</strong> e a <strong>especificação inicial do modelo de qualidade</strong> que será adotado.
+De acordo com a norma <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010">ISO/IEC 25010</a> e com as recomendações do SWEBOK, a clareza nessa definição inicial é essencial para garantir que os resultados da avaliação sejam consistentes, reproduzíveis e aplicáveis às necessidades reais das partes interessadas.</p>
+<hr />
+<h2 id="metodologia">Metodologia<a class="headerlink" href="#metodologia" title="Permanent link">&para;</a></h2>
+<p>A condução da Fase 1 seguiu um processo estruturado em etapas:</p>
+<ol>
+<li><strong>Identificação do contexto e stakeholders:</strong> foram mapeados o requisitante principal (UnB), os compradores potenciais (IFES), os fornecedores (LAPPIS/UnB), os desenvolvedores (comunidade acadêmica e de software livre) e os operadores (gestores de energia).</li>
+<li><strong>Classificação do produto:</strong> o MEPA foi caracterizado como um sistema de <strong>apoio à decisão</strong> em gestão energética, com arquitetura baseada em aplicação <strong>web</strong> e <strong>API aberta</strong>, além de ser distribuído como <strong>software livre</strong>.</li>
+<li><strong>Definição do propósito da avaliação:</strong> estabeleceu-se que a avaliação deve verificar se o MEPA atende ao seu propósito central, entregando resultados adequados, eficientes e de fácil manutenção.</li>
+<li><strong>Adaptação do modelo de qualidade ISO/IEC 25010:</strong> foram selecionadas apenas as características mais críticas (adequação funcional, eficiência e manutenibilidade), deixando de fora, nesta fase, aspectos como usabilidade.</li>
+<li><strong>Priorização das características de qualidade:</strong> aplicou-se o critério de alinhamento com o propósito do produto, impacto para o usuário final e relevância para sua continuidade no ambiente real.</li>
+<li><strong>Definição do escopo da avaliação:</strong> estabeleceu-se que o foco será nas funcionalidades principais, no código-fonte disponível em repositórios públicos, na documentação e em relatórios de uso, com profundidade suficiente para gerar insumos práticos para futuras evoluções.</li>
+</ol>
+<hr />
+<h2 id="resultados-esperados">Resultados Esperados<a class="headerlink" href="#resultados-esperados" title="Permanent link">&para;</a></h2>
+<h3 id="requisitante-e-partes-interessadas">Requisitante e partes interessadas<a class="headerlink" href="#requisitante-e-partes-interessadas" title="Permanent link">&para;</a></h3>
+<p>O <strong>requisitante principal</strong> é a Universidade de Brasília, no contexto da disciplina de Qualidade de Software (FGA315).
+As <strong>partes interessadas</strong> incluem:</p>
+<ul>
+<li><strong>Comprador/Cliente:</strong> Instituições Federais de Ensino Superior (IFES), que se beneficiam da economia gerada pela plataforma.</li>
+<li><strong>Fornecedor:</strong> o LAPPIS/UnB, responsável pela manutenção e evolução do software.</li>
+<li><strong>Desenvolvedores:</strong> equipe acadêmica e comunidade de software livre.</li>
+<li><strong>Operadores:</strong> gestores de energia das universidades, que utilizam diretamente as recomendações do sistema.</li>
+</ul>
+<h3 id="descricao-estruturada-do-software">Descrição estruturada do software<a class="headerlink" href="#descricao-estruturada-do-software" title="Permanent link">&para;</a></h3>
+<p>O <strong>MEPA</strong> é um software de código aberto voltado para a <strong>gestão e otimização de contratos de energia elétrica</strong>. Ele processa dados de consumo e aplica algoritmos de análise para sugerir a modalidade tarifária mais econômica, apoiando a tomada de decisão em instituições públicas.
+Por ser software livre, pode ser adaptado e expandido conforme as necessidades de cada instituição.</p>
+<h3 id="classificacao-do-tipo-de-produto">Classificação do tipo de produto<a class="headerlink" href="#classificacao-do-tipo-de-produto" title="Permanent link">&para;</a></h3>
+<p>O software é classificado como:</p>
+<ul>
+<li>Um <strong>sistema de apoio à decisão</strong> voltado à gestão energética.</li>
+<li>Uma aplicação <strong>web</strong>, acessível por interface gráfica e integrável via <strong>API aberta</strong>.</li>
+<li>Um <strong>produto de software livre</strong>, garantindo transparência, auditabilidade e possibilidade de contribuição externa.</li>
+</ul>
+<h3 id="proposito-da-avaliacao">Propósito da avaliação<a class="headerlink" href="#proposito-da-avaliacao" title="Permanent link">&para;</a></h3>
+<p>A avaliação pretende:</p>
+<ul>
+<li>Determinar o nível de qualidade do MEPA frente às características selecionadas.</li>
+<li>Garantir que os resultados sejam <strong>práticos e aplicáveis</strong> em instituições reais.</li>
+<li>Fornecer <strong>insumos para melhorias contínuas</strong> do software, orientando tanto ajustes técnicos quanto decisões de governança do projeto.</li>
+</ul>
+<h3 id="modelo-de-qualidade">Modelo de qualidade<a class="headerlink" href="#modelo-de-qualidade" title="Permanent link">&para;</a></h3>
+<p>Para a avaliação do software MEPA, a equipe optou por utilizar o Modelo de Qualidade do Produto (Product Quality Model) da norma <strong>ISO/IEC 25010</strong> </p>
+<p><img alt="Diagrama de Classes" src="../images/Produt-Quality.png" /></p>
+<p align="center">
+<strong>Figura 1</strong> – Modelo Qualidade e Produto
+</p>
+
+<p>O Modelo de Qualidade do Produto é a estrutura ideal para o MEPA porque ele se concentra nas características intrínsecas e estáticas do software. Como o projeto avaliado, é um sistema especializado na Recomendação e Análise, nossa prioridade  é garantir a qualidade do sistema em si, antes de medir a satisfação do usuário em um ambiente operacional (Qualidade em Uso).</p>
+<p>As principais razões para essa escolha são:</p>
+<ul>
+<li>
+<p><strong>Natureza Crítica dos Dados e Cálculos:</strong> O MEPA lida com a análise e recomendação de ajustes em Contratos de Energia Elétrica com base em faturas mensais. Qualquer erro de cálculo ou de função tem um impacto financeiro direto e significativo para as Instituições de Ensino Superior (IES).</p>
+<p>Isso torna a característica de Adequação Funcional (principalmente Corretude Funcional) e Eficiência de Desempenho (velocidade e precisão dos cálculos) absolutamente críticas.</p>
+</li>
+<li>
+<p><strong>Manutenção e Evolução Contínua:</strong> Contratos de energia e regulamentações mudam constantemente. Para que o MEPA continue gerando recomendações válidas, ele deve ser facilmente modificável e analisável.</p>
+<p>A característica de Manutenibilidade (especialmente Modularidade e Modificabilidade) é importante garantir que o sistema possa evoluir sem quebrar funcionalidades existentes.</p>
+</li>
+</ul>
+<p>Aspectos como <strong>usabilidade</strong> foram excluídos nesta fase, pois não se relacionam diretamente ao propósito principal da avaliação. O SWEBOK reforça que a seleção das características avaliadas deve sempre refletir o uso pretendido do software e o contexto do projeto <a href="https://computer.org/swebok">(IEEE Computer Society, 2025, p. 12-6)</a>.</p>
+<h3 id="adaptacao-e-priorizacao">Adaptação e priorização<a class="headerlink" href="#adaptacao-e-priorizacao" title="Permanent link">&para;</a></h3>
+<p>Embora o modelo ISO/IEC 25010 seja composto por oito características, esta avaliação se concentrará nas três mais críticas para o propósito do MEPA, garantindo uma análise com maior profundidade e relevância prática.</p>
+<p>As características priorizadas e o motivo da escolha são:</p>
+<h4 id="adequacao-funcional-functional-suitability">Adequação Funcional (Functional Suitability)<a class="headerlink" href="#adequacao-funcional-functional-suitability" title="Permanent link">&para;</a></h4>
+<p><strong>Prioridade Alta</strong></p>
+<p>Esta característica valida se o software entrega as funcionalidades prometidas com precisão. Para o MEPA, isso se traduz em sua capacidade de analisar faturas e recomendar contratos de energia de forma correta. A corretude funcional é o requisito mais crítico, pois um cálculo impreciso ou uma recomendação equivocada pode levar a decisões financeiras prejudiciais para as IFES, invalidando completamente o propósito do sistema.</p>
+<hr />
+<h4 id="eficiencia-de-desempenho-performance-efficiency">Eficiência de Desempenho (Performance Efficiency)<a class="headerlink" href="#eficiencia-de-desempenho-performance-efficiency" title="Permanent link">&para;</a></h4>
+<p><strong>Prioridade Alta</strong></p>
+<p>Avalia o desempenho do software em relação aos recursos consumidos (tempo e processamento). O MEPA precisa processar grandes volumes de dados históricos de consumo de múltiplas fontes. A lentidão na geração de relatórios compromete a utilidade prática da ferramenta, podendo atrasar decisões administrativas e financeiras importantes. Portanto, o sistema deve ser capaz de executar suas análises em tempo hábil, mesmo com o aumento da carga de dados.</p>
+<hr />
+<h4 id="manutenibilidade-maintainability">Manutenibilidade (Maintainability)<a class="headerlink" href="#manutenibilidade-maintainability" title="Permanent link">&para;</a></h4>
+<p><strong>Prioridade Média</strong></p>
+<p>Refere-se à facilidade com que o software pode ser modificado para corrigir falhas, melhorar o desempenho ou adaptar-se a um ambiente em mudança. O domínio de contratos de energia é altamente regulamentado e volátil (novas tarifas, impostos, regras). O risco de obsolescência das regras de negócio é alto, e a manutenibilidade é o que mitiga esse risco. Sendo um projeto de software livre acadêmico, sua evolução depende de contribuições externas. Um código modular, testável e fácil de entender é fundamental para atrair e reter colaboradores, garantindo a sustentabilidade e a vida útil do projeto.</p>
+<hr />
+<p>Ao restringir o foco a estas três características, garantimos uma avaliação mais profunda e prática, diretamente alinhada aos riscos e objetivos de negócio do sistema.</p>
+<hr />
+<h3 id="escopo-e-profundidade-da-avaliacao">Escopo e profundidade da avaliação<a class="headerlink" href="#escopo-e-profundidade-da-avaliacao" title="Permanent link">&para;</a></h3>
+<p>O escopo cobre:</p>
+<ul>
+<li>As funcionalidades centrais do MEPA (análise de faturas e recomendação de contratos).</li>
+<li>O código aberto disponível no <a href="https://gitlab.com/lappis-unb/projects/SMI/mepa">GitLab do projeto</a>.</li>
+<li>A documentação e os relatórios de uso.</li>
+</ul>
+<p>A profundidade da análise será suficiente para apontar <strong>pontos fortes, fragilidades e oportunidades de melhoria</strong>, sem esgotar todos os aspectos possíveis.
+Essa avaliação é complementar a futuras análises de <strong>usabilidade</strong> e <strong>segurança</strong>.</p>
+<h3 id="ods-relacionados">ODS relacionados<a class="headerlink" href="#ods-relacionados" title="Permanent link">&para;</a></h3>
+<p>O MEPA contribui diretamente para os seguintes Objetivos de Desenvolvimento Sustentável (ODS):</p>
+<ul>
+<li><strong>ODS 7 (Energia acessível e limpa, meta 7.3):</strong> promove eficiência energética.</li>
+<li><strong>ODS 12 (Consumo e produção responsáveis, metas 12.2/12.6/12.7):</strong> baseia decisões em dados, reduz desperdícios e incentiva práticas sustentáveis.</li>
+<li><strong>ODS 13 (Ação climática, meta 13.2):</strong> ao otimizar consumo e contratos, contribui para reduzir emissões de CO₂.</li>
+<li><strong>ODS 9 (Indústria, inovação e infraestrutura, meta 9.4):</strong> moderniza a gestão energética pública com uso de IA e software livre.</li>
+<li><strong>ODS 4 (Educação de qualidade, meta 4.a):</strong> libera orçamento para ensino e pesquisa ao reduzir gastos com energia.</li>
+<li><strong>ODS 17 (Parcerias, metas 17.16/17.17):</strong> articula MEC, UnB e redes de universidades na adoção da ferramenta.</li>
+</ul>
+<p><strong>Justificativa:</strong> ao integrar tecnologia aberta com impacto direto em economia, sustentabilidade e inovação, o MEPA mostra-se alinhado a múltiplos ODS e reforça o papel da universidade como agente de transformação social.</p>
+<hr />
+<h2 id="referencias-bibliograficas">Referências Bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>IEEE COMPUTER SOCIETY. <em>Guide to the Software Engineering Body of Knowledge (SWEBOK Guide) V4.0a</em>. IEEE, 2025. Disponível em: <a href="https://computer.org/swebok">https://computer.org/swebok</a>.</li>
+<li>ISO/IEC 25010 – <em>Systems and Software Engineering — Systems and Software Quality Requirements and Evaluation (SQuaRE) — System and Software Quality Models</em>. Disponível em: <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010">https://iso25000.com/index.php/en/iso-25000-standards/iso-25010</a>.</li>
+</ul>
+<hr />
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ODS - Nações Unidas. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs">https://brasil.un.org/pt-br/sdgs</a>.</li>
+<li>MEPA - Monitoramento de Energia em Plataforma Aberta. Disponível em: <a href="https://gitlab.com/lappis-unb/projects/SMI/mepa">https://gitlab.com/lappis-unb/projects/SMI/mepa</a>.</li>
+</ul>
+<hr />
+<h2 id="historico-de-versoes">Histórico de Versões<a class="headerlink" href="#historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Data</strong></th>
+<th style="text-align: center;"><strong>Versão</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: center;"><strong>Autor</strong></th>
+<th style="text-align: center;"><strong>Revisor</strong></th>
+<th style="text-align: center;"><strong>Data da Revisão</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">27/09/2025</td>
+<td style="text-align: center;"><code>1.0</code></td>
+<td style="text-align: left;">Documentação inicial da entrega da Fase 1</td>
+<td style="text-align: center;"><a href="https://github.com/davi-aguiar-vieira"><code>@Arth e @Davia Aguiar</code></a></td>
+<td style="text-align: center;"><a href="https://github.com/fabinsz"><code>@Fabio</code></a></td>
+<td style="text-align: center;">27/09/2025</td>
+</tr>
+<tr>
+<td style="text-align: center;">27/09/2025</td>
+<td style="text-align: center;"><code>1.1</code></td>
+<td style="text-align: left;">Detalhamento de adaptação e priorização</td>
+<td style="text-align: center;"><a href="https://github.com/arthrok"><code>@Arthur</code></a></td>
+<td style="text-align: center;"><a href=""><code>@</code></a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">30/09/2025</td>
+<td style="text-align: center;"><code>1.2</code></td>
+<td style="text-align: left;">Documentação mais detalhada dos modelos de qualidade, adaptação e priorização</td>
+<td style="text-align: center;"><a href="https://github.com/fabinsz"><code>@Fabio</code></a></td>
+<td style="text-align: center;"><a href=""><code>@</code></a></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">01/10/2025</td>
+<td style="text-align: center;"><code>1.3</code></td>
+<td style="text-align: left;">Adição da seção de Metodologia e detalhamento dos stakeholders (partes interessadas).</td>
+<td style="text-align: center;"><a href=""><code>@Wallyson</code></a></td>
+<td style="text-align: center;"><a href="https://github.com/fabinsz"><code>@Fabio</code></a></td>
+<td style="text-align: center;">01/10/2025</td>
+</tr>
+<tr>
+<td style="text-align: center;">01/10/2025</td>
+<td style="text-align: center;"><code>1.4</code></td>
+<td style="text-align: left;">Elaboração da justificativa para a priorização das características de qualidade (Adequação Funcional, Eficiência e Manutenibilidade).</td>
+<td style="text-align: center;"><a href=""><code>@Mateus</code></a></td>
+<td style="text-align: center;"><a href=""><code>@Wallyson</code></a></td>
+<td style="text-align: center;">01/10/2025</td>
+</tr>
+<tr>
+<td style="text-align: center;">01/10/2025</td>
+<td style="text-align: center;"><code>1.5</code></td>
+<td style="text-align: left;">Inclusão da análise dos Objetivos de Desenvolvimento Sustentável (ODS) e formatação das referências bibliográficas.</td>
+<td style="text-align: center;"><a href=""><code>@Felipe</code></a></td>
+<td style="text-align: center;"><a href=""><code>@Mateus</code></a></td>
+<td style="text-align: center;">01/10/2025</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+      
+        <script src="../js/lightbox-init.js"></script>
+      
+        <script src="../js/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
