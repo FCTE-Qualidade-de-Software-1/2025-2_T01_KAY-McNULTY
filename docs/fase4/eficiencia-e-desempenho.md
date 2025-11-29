@@ -1,89 +1,111 @@
-# 4. Resultados da Avaliação: Eficiência de Desempenho (G-PE)
+# Resultados da Avaliação Eficiência de Desempenho G-PE
 
-Esta seção documenta a execução dos testes de carga e a análise de recursos computacionais, conforme planejado na Fase 2 (GQM) e detalhado na metodologia da Fase 4. O objetivo é validar se o sistema MEPA atende aos requisitos de performance sob condições de estresse.
+Esta seção documenta a execução dos testes de carga e a análise do consumo de recursos computacionais, conforme planejado na Fase 2 GQM e detalhado na metodologia da Fase 4. O objetivo é verificar se o sistema MEPA mantém desempenho aceitável sob carga concorrente e identificar sinais de gargalo.
 
-## 4.1. Configuração do Cenário de Teste
-O teste de carga foi executado utilizando a ferramenta **Locust**, simulando o comportamento de usuários concorrentes no fluxo principal da aplicação. O monitoramento foi realizado em tempo real via **Prometheus** e **Grafana**.
+O teste foi executado no ambiente de homologação do MEPA. O host que hospedava a aplicação durante a execução possuía 2 vCPU e 2 GB de RAM.
 
-* **Cenário de Carga:** Ramp-up gradual até atingir **50 usuários simultâneos**.
-* **Janela de Execução:** Aproximadamente 4 minutos de estabilidade (Plateau).
-* **Perfil de Usuário:** Execução do fluxo “analisar → recomendar”.
+## Configuração do Cenário de Teste
+
+O teste de carga foi executado com a ferramenta Locust, simulando usuários concorrentes realizando requisições HTTP no endpoint monitorado. O monitoramento de infraestrutura foi acompanhado via Prometheus e Grafana.
+
+* Cenário de carga Ramp up gradual até atingir 50 usuários simultâneos
+* Janela de execução aproximadamente 4 minutos em platô com carga estabilizada
+* Perfil de requisição GET no endpoint /api/monitoramento
+
+Conceitos usados no Locust
+
+* Number of users representa a concorrência alvo do teste, isto é, quantos usuários ficam ativos ao mesmo tempo
+* Ramp up representa a velocidade de subida da carga, quantos usuários entram por segundo até chegar no total. Ramp up maior sobe mais rápido e tende a gerar mais pico, ramp up menor sobe mais suave e costuma ser melhor para observar estabilidade
+* Plateau platô é o período em que o número de usuários já atingiu o alvo e se mantém estável. Essa é a janela mais confiável para julgar throughput e latência sem interferência da subida
+
+Código utilizado no teste
+
+```python
+from locust import HttpUser, task, between
+
+class MeuTeste(HttpUser):
+    wait_time = between(1, 3)
+
+    @task
+    def listar_faturas(self):
+        self.client.get("/api/monitoramento")
+```
 
 ---
 
-## 4.2. Análise das Métricas e Evidências
+## Análise das Métricas e Evidências
 
-Abaixo são detalhados os resultados coletados para cada métrica definida no plano de testes.
+A seguir são detalhados os resultados coletados para cada métrica definida no plano de testes, com base nos gráficos enviados.
 
-### M-PE-01: Estabilidade do Throughput e M-PE-04: Escalabilidade
-**Objetivo:** Verificar se o sistema mantém o processamento estável sob carga e se escala linearmente.
+### M-PE-01 Estabilidade do Throughput e M-PE-04 Escalabilidade
 
-![Gráfico do Locust: Total Requests per Second, Response Times e Number of Users](../images/locust.jpeg)
-*(Figura 1: Painel do Locust demonstrando RPS, Tempo de Resposta e Quantidade de Usuários)*
+Objetivo verificar se o sistema mantém processamento estável sob carga e como o desempenho responde ao aumento de usuários.
 
-* **Análise M-PE-01 (Throughput):** Durante o pico de carga (50 usuários), o sistema manteve um throughput estável variando entre **20 e 23 RPS** (Requisições por Segundo). A taxa de falhas (*Failures/s*) permaneceu em 0 durante todo o teste.
-* **Análise M-PE-04 (Escalabilidade):** Observa-se no terceiro gráfico da Figura 1 ("Number of Users") que o aumento do throughput acompanhou proporcionalmente a entrada de usuários, formando um platô consistente. O sistema escalou de forma linear para a carga proposta.
+![Gráfico do Locust Total Requests per Second Response Times e Number of Users](../images/locust.jpeg)
 
-### M-PE-02: Latência de Resposta
-**Objetivo:** Verificar se o tempo de resposta se smantém dentro dos limites aceitáveis para a experiência do usuário.
+*Figura 1 Painel do Locust com RPS tempos de resposta e número de usuários*
 
-*(Consultar Figura 1 acima, gráfico "Response Times")*
+* Análise M-PE-01 Throughput durante o platô em torno de 50 usuários simultâneos o sistema sustentou aproximadamente 20 a 23 RPS e a série de Failures por segundo permaneceu próxima de zero, indicando estabilidade de vazão e ausência de falhas relevantes no período observado
+* Análise M-PE-04 Escalabilidade o crescimento do RPS acompanhou a subida de usuários até formar um platô consistente, sugerindo que, até a carga testada, a aplicação absorveu o aumento de concorrência sem colapso de vazão. Ao mesmo tempo, como será mostrado nas métricas de CPU, o host operou próximo do limite, o que tende a restringir ganhos de escala em cargas maiores
 
-* **Resultado:**
-    * **Percentil 50 (Mediana):** Manteve-se estável entre 300ms e 600ms.
-    * **Percentil 95 (p95):** O tempo de resposta para 95% das requisições oscilou, atingindo um pico máximo de aproximadamente **1.100ms (1.1s)**, estabilizando-se majoritariamente abaixo de 1.0s.
-* **Conclusão:** O critério de aceitação definia o limite de 2s. O sistema atendeu ao requisito com margem de segurança.
+### M-PE-02 Latência p95
 
-### M-PE-03: Saturação de Recursos (CPU e RAM)
-**Objetivo:** Monitorar o consumo de infraestrutura para identificar gargalos ou sobredimensionamento.
+Objetivo verificar se o tempo de resposta se mantém dentro de limites aceitáveis para a experiência do usuário.
+
+Consultar Figura 1 no gráfico Response Times
+
+* Resultado p50 mediana permaneceu em centenas de milissegundos durante boa parte do platô, variando ao longo do tempo
+* Resultado p95 houve oscilação com picos próximos de 1100 ms, e na maior parte do tempo o p95 ficou abaixo de 1 segundo
+* Conclusão considerando um critério de aceitação de p95 menor que 2 segundos, o sistema atendeu ao requisito com margem. Ainda assim, a variabilidade do p95 indica que existe pressão de recurso e que aumentos de carga podem elevar a cauda de latência
+
+### M-PE-03 Saturação de Recursos CPU e RAM
+
+Objetivo monitorar uso de infraestrutura para identificar gargalos ou falta de folga operacional.
 
 #### Análise de CPU
+
 ![Gráfico de Uso de CPU](../images/consumo_cpu.jpeg)
-*(Figura 2: Consumo de CPU por núcleo durante o teste)*
 
-* **Observação:** O núcleo `Cpu1` (linha azul) operou próximo a **100% de utilização** durante quase toda a janela de teste, indicando saturação de processamento. O `Cpu0` (linha verde) apresentou comportamento oscilatório.
-* **Resultado:** O pico de uso ultrapassou o limite estabelecido de 80%.
+*Figura 2 Consumo de CPU por núcleo durante o teste*
 
-#### Análise de Memória (RAM)
+* Observação o núcleo Cpu1 operou muito próximo de 100 por cento por grande parte do período, enquanto o Cpu0 oscilou com picos e quedas
+* Interpretação isso indica saturação de processamento e possível concentração de trabalho em um único núcleo, um padrão compatível com aumento de p95 e maior variabilidade quando a carga se mantém alta
+* Resultado o pico observado supera o limite de 80 por cento definido como margem de segurança, caracterizando não conformidade para saturação de CPU
+
+#### Análise de Memória RAM
+
 ![Gráfico de Uso de Memória](../images/uso_memoria_ram.jpeg)
-*(Figura 3: Consumo de Memória RAM)*
 
-* **Observação:** O consumo manteve-se linear e constante em aproximadamente **1.76 GiB**.
-* **Resultado:** Considerando a capacidade total alocada, o uso estimado está em torno de **88%**, superando o limite de segurança de 75% definido no GQM.
+*Figura 3 Consumo de memória RAM durante o teste*
 
-#### Evidências de Apoio (Rede e Disco)
-Para contextualizar o alto uso de CPU, analisou-se também a taxa de transferência de disco e rede.
+* Observação o consumo permaneceu praticamente constante em torno de 1.7 GiB
+* Resultado como o host possuía 2 GB de RAM, o uso ficou alto e com pouca folga operacional, o que aumenta risco de instabilidade e piora de latência sob picos ou cargas maiores
+
+#### Evidências de Apoio Disco e Rede
 
 ![Gráfico de Disk Throughput](../images/transferencia_disco.jpeg)
-*(Figura 4: Taxa de transferência de disco)*
+
+*Figura 4 Taxa de transferência de disco*
 
 ![Gráfico de Network Throughput](../images/rede.jpeg)
-*(Figura 5: Taxa de transferência de rede)*
 
-* **Análise Complementar:** A alta atividade de escrita em disco (picos frequentes de ~70 KiB na Figura 4) correlaciona-se com o alto uso de CPU, sugerindo operações intensivas de I/O (Log ou Banco de Dados).
+*Figura 5 Taxa de transferência de rede*
+
+* Análise complementar houve atividade frequente de escrita em disco durante a janela do teste e vazão de rede em patamar estável durante o platô. A combinação de CPU elevada com escrita recorrente em disco pode contribuir para oscilações do p95, pois aumenta competição por recursos em momentos de maior concorrência
 
 ---
 
-## 4.3. Matriz de Conformidade e Julgamento
+## Matriz de Conformidade e Julgamento
 
-Com base na execução dos checklists de verificação e análise das evidências acima, apresenta-se o julgamento final da dimensão Eficiência de Desempenho.
+| ID Métrica | Descrição             | Resultado Obtido                                                | Critério de Julgamento                      | Status                    |
+| :--------- | :-------------------- | :-------------------------------------------------------------- | :------------------------------------------ | :------------------------ |
+| M-PE-01    | Throughput estável    | ~22 RPS constantes e sem falhas relevantes                      | Manter-se estável sob carga                 | ✅ Conforme                |
+| M-PE-02    | Latência p95          | Pico ~1.1 s e em geral abaixo de 1 s                            | p95 < 2 s                                   | ✅ Aceitável               |
+| M-PE-03    | Saturação de recursos | CPU próxima de 100 por cento e RAM ~1.7 GiB em host 2 GB        | CPU < 80 por cento e RAM < 75 por cento     | ❌ Não conforme            |
+| M-PE-04    | Escalabilidade        | RPS cresce com usuários até formar platô, mas com CPU no limite | Crescimento consistente sem pressão crítica | ✅ Aceitável com ressalvas |
 
-| ID Métrica | Descrição | Resultado Obtido | Critério de Julgamento | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **M-PE-01** | Throughput estável | ~22 RPS constantes, 0 falhas | Manter-se estável sob carga | ✅ **Conforme** |
-| **M-PE-02** | Latência (p95) | Pico de 1.1s (< 2s) | p95 < 2s | ✅ **Aceitável** |
-| **M-PE-03** | Saturação de Recursos | **CPU:** ~99% (Pico) <br> **RAM:** ~88% | CPU < 80% <br> RAM < 75% | ❌ **Não Conforme** |
-| **M-PE-04** | Escalabilidade | Resposta linear à carga | Escalabilidade ≥ 80% linear | ✅ **Aceitável** |
+## Conclusão da Fase 4 G-PE
 
-## 4.4. Conclusão da Fase 4 (G-PE)
+No ambiente de homologação do MEPA, executando em um host com 2 vCPU e 2 GB de RAM, o sistema manteve vazão estável na faixa de 20 a 23 RPS e não apresentou falhas relevantes durante o platô com aproximadamente 50 usuários simultâneos. A latência p95 apresentou picos próximos de 1.1 s, permanecendo abaixo do limite de 2 s definido como critério de aceitação, o que indica experiência geral aceitável na carga testada.
 
-Os testes de carga validaram que a aplicação **MEPA** é capaz de entregar uma experiência de usuário fluida, com tempos de resposta rápidos (M-PE-02) e estabilidade de conexão (M-PE-01), mesmo sob a carga máxima estipulada de 50 usuários simultâneos.
-
-Entretanto, a infraestrutura atual apresentou **Não Conformidade** crítica na métrica **M-PE-03 (Recursos)**.
-1.  **CPU:** O sistema operou em saturação (gargalo de processamento), evidenciado pelo uso de 100% em um dos núcleos.
-2.  **RAM:** A margem de memória livre é insuficiente para garantir estabilidade em picos maiores de carga.
-
-**Recomendação de Melhoria:**
-Para adequação aos critérios de qualidade, recomenda-se:
-* Realizar *tuning* da aplicação para melhor aproveitamento de múltiplos núcleos (multithreading).
-* Aumentar verticalmente a memória da VM (Scale Up) ou otimizar o consumo de memória da aplicação.
+Apesar disso, as métricas de infraestrutura mostram que a execução ocorreu com CPU em saturação e memória com pouca folga, o que caracteriza não conformidade para a métrica de saturação e sugere que a escalabilidade para além do patamar testado tende a ser limitada. A recomendação imediata é reduzir o gargalo de CPU e aumentar a folga de RAM, seja por otimização da aplicação e do caminho de requisição, seja por ajuste de recursos do host, antes de repetir testes em cargas maiores.
